@@ -4,13 +4,15 @@ import {Guid} from "../guid";
 /**
  * Provides efficient access to a collection of {@link Component} instances.
  */
-export interface ComponentIndex {
+export interface ComponentIndex<
+  GenericComponent extends Component = Component
+> {
   /**
    * A mapping of {@link Component} ids to {@link Component} instances.
    *
    * This can be useful when you want to retrieve a single {@link Component} instance by its id.
    */
-  byComponentId: Record<Guid, Component>;
+  byComponentId: Record<Guid, GenericComponent>;
 
   /**
    * A mapping of entity ids to {@link Component} id arrays.
