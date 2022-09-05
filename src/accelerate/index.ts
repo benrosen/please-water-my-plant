@@ -1,0 +1,1 @@
+export {accelerate} from "./accelerate";
