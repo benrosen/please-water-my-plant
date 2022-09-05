@@ -5,5 +5,7 @@ import {Vector} from "./vector";
  * @param value A value of `unknown` type.
  */
 export const isVector = (value: unknown): value is Vector => {
-  return typeof value["x"] === "number" && typeof value["y"] === "number";
+  return (
+    value && typeof value["x"] === "number" && typeof value["y"] === "number"
+  );
 };
