@@ -1,3 +1,4 @@
+import {isTimestamp} from "../timestamp";
 import {Timestamped} from "./timestamped";
 
 /**
@@ -5,5 +6,5 @@ import {Timestamped} from "./timestamped";
  * @param value A value of `unknown` type.
  */
 export const isTimestamped = (value: unknown): value is Timestamped => {
-  return isTimestamp(value["color"]);
+  return isTimestamp(value["timestamp"]);
 };
