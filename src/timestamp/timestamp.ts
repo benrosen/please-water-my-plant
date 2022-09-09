@@ -1,4 +1,6 @@
+import {Milliseconds} from "../milliseconds";
+
 /**
- * Represents the number of milliseconds since the beginning of the Unix Epoch.
+ * Represents the number of {@link Milliseconds} since the beginning of the Unix Epoch.
  */
-export type Timestamp = number;
+export type Timestamp = Milliseconds;
