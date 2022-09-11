@@ -2,7 +2,7 @@ import {Response} from "express";
 import {InternalServerErrorStatusCode} from "../internal-server-error-status-code";
 
 /**
- * Send a 500 status code to the client via the given {@link Response}.
+ * Send an {@link InternalServerErrorStatusCode} to the client via the given {@link Response}.
  * @param params The config options
  * @param params.response The {@link Response} with which to send a 500 status code to the client.
  */
