@@ -1,4 +1,5 @@
 import {Response} from "express";
+import {InternalServerErrorStatusCode} from "../internal-server-error-status-code";
 
 /**
  * Send a 500 status code to the client via the given {@link Response}.
@@ -10,7 +11,7 @@ export const respondWithInternalServerError = ({
 }: {
   response: Response;
 }) => {
-  response.status(500);
+  response.status(InternalServerErrorStatusCode);
 
   response.send();
 };
