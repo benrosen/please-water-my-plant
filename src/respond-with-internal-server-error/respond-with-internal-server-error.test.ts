@@ -1,5 +1,6 @@
 import { Response } from "express";
 import { InternalServerErrorStatusCode } from "../internal-server-error-status-code";
+import { respondWithStatusCode } from "../respond-with-status-code";
 import { respondWithInternalServerError } from "./respond-with-internal-server-error";
 
 const mockSend = jest.fn();
@@ -11,14 +12,22 @@ const mockResponse = {
   status: mockStatus,
 } as unknown as Response;
 
+jest.mock("../respond-with-status-code", () => {
+  return {
+    ...jest.requireActual("../respond-with-status-code"),
+    respondWithStatusCode: jest.fn(),
+  };
+});
+
+const mockRespondWithStatusCode = jest.mocked(respondWithStatusCode);
+
 describe("The respondWithInternalServerError function", () => {
-  respondWithInternalServerError({ response: mockResponse });
+  it("should call respondWithStatusCode with the provided Response and InternalServerError", () => {
+    respondWithInternalServerError({ response: mockResponse });
 
-  it("should call response.status with InternalServerErrorStatusCode", () => {
-    expect(mockStatus).toHaveBeenCalledWith(InternalServerErrorStatusCode);
-  });
-
-  it("should call response.send", () => {
-    expect(mockSend).toHaveBeenCalled();
+    expect(mockRespondWithStatusCode).toHaveBeenCalledWith({
+      response: mockResponse,
+      statusCode: InternalServerErrorStatusCode,
+    });
   });
 });
