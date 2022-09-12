@@ -21,7 +21,7 @@ describe("The configureGetComponentsEndpoint function", () => {
     );
   });
 
-  describe("should throw an error when", function () {
+  describe("should throw an error", function () {
     test("when server.get throws an error", () => {
       mockGet.mockImplementationOnce(() => {
         throw new Error();
