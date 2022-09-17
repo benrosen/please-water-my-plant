@@ -1,8 +1,16 @@
+import * as bodyParser from "body-parser";
+import * as cors from "cors";
 import * as express from "express";
 import {Component} from "../component";
-import {configureGetComponentsEndpoint} from "../configure-get-components-endpoint";
-import {configurePostOrderEndpoint} from "../configure-post-order-endpoint";
+import {ComponentsResourcePath} from "../components-resource-path";
+import {OkStatusCode} from "../ok-status-code";
 import {Order} from "../order";
+import {OrderResourcePath} from "../order-resource-path";
+import {parseOrderFromRequest} from "../parse-order-from-request";
+import {respondWithAccepted} from "../respond-with-accepted";
+import {respondWithBadRequestError} from "../respond-with-bad-request-error";
+import {respondWithInternalServerError} from "../respond-with-internal-server-error";
+import {ServerSentEventHeaders} from "../server-sent-event-headers";
 
 /**
  * Create an API for posting {@link Order} objects and getting {@link Component} updates.
@@ -21,13 +29,37 @@ export const createApi = ({
 }) => {
   const server = express();
 
-  configureGetComponentsEndpoint({
-    registerOnComponentsChangedHandler,
-    server,
+  server.use(bodyParser.json());
+
+  server.use(bodyParser.urlencoded({ extended: false }));
+
+  server.use(cors());
+
+  server.get(ComponentsResourcePath, (request, response) => {
+    response.writeHead(OkStatusCode, ServerSentEventHeaders);
+
+    response.flushHeaders();
+
+    registerOnComponentsChangedHandler((components: Component[]) => {
+      response.write(`data: ${JSON.stringify(components)}\n\n`);
+    });
   });
 
-  configurePostOrderEndpoint({
-    handlePostedOrder: onOrderPosted,
-    server,
+  server.post(OrderResourcePath, (request, response) => {
+    try {
+      const order = parseOrderFromRequest({ request });
+
+      if (order === undefined) {
+        return respondWithBadRequestError({ response });
+      }
+
+      onOrderPosted(order);
+
+      return respondWithAccepted({ response });
+    } catch {
+      return respondWithInternalServerError({ response });
+    }
   });
+
+  return server;
 };
