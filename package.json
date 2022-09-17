@@ -1,13 +1,17 @@
 {
-  "name": "kill-your-friends",
+  "name": "monster-mashup",
   "version": "1.0.0",
   "scripts": {
     "test": "jest"
   },
   "devDependencies": {
+    "@types/body-parser": "^1.19.2",
+    "@types/cors": "^2.8.12",
+    "@types/eventsource": "^1.1.9",
     "@types/express": "^4.17.13",
     "@types/jest": "^28.1.6",
     "@types/supertest": "^2.0.12",
+    "eventsource": "^2.0.2",
     "jest": "^28.1.3",
     "prettier": "^2.7.1",
     "supertest": "^6.2.4",
@@ -15,6 +19,8 @@
     "typescript": "^4.7.4"
   },
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "cors": "^2.8.5",
     "express": "^4.18.1"
   }
 }
