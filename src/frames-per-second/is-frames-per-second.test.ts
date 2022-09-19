@@ -2,7 +2,7 @@ import { isFramesPerSecond } from "./is-frames-per-second";
 
 const validExamples = [0, 1, 12];
 
-const invalidExamples = [false, "hello"];
+const invalidExamples = [false, "hello", 0, -1];
 
 describe("The isFramesPerSecond type-guard function", () => {
   describe("should return true", () => {

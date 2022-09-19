@@ -1,3 +1,5 @@
+import {isInteger} from "../integer";
+import {isPositiveNumber} from "../positive-number";
 import {FramesPerSecond} from "./frames-per-second";
 
 /**
@@ -5,5 +7,5 @@ import {FramesPerSecond} from "./frames-per-second";
  * @param value A value of `unknown` type.
  */
 export const isFramesPerSecond = (value: unknown): value is FramesPerSecond => {
-  return typeof value === "number";
+  return isInteger(value) && isPositiveNumber(value);
 };
