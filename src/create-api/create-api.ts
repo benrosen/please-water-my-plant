@@ -1,6 +1,7 @@
 import * as bodyParser from "body-parser";
 import * as cors from "cors";
 import * as express from "express";
+import {CloseEventName} from "../close-event-name";
 import {Component} from "../component";
 import {ComponentsResourcePath} from "../components-resource-path";
 import {OkStatusCode} from "../ok-status-code";
@@ -25,7 +26,7 @@ export const createApi = ({
   onOrderPosted: (order: Order) => void;
   registerOnComponentsChangedHandler: (
     handleOnComponentsChanged: (components: Component[]) => void
-  ) => void;
+  ) => () => void;
 }) => {
   const server = express();
 
@@ -40,9 +41,12 @@ export const createApi = ({
 
     response.flushHeaders();
 
-    registerOnComponentsChangedHandler((components: Component[]) => {
-      response.write(`data: ${JSON.stringify(components)}\n\n`);
-    });
+    const deregisterOnComponentsChangedHandler =
+      registerOnComponentsChangedHandler((components: Component[]) => {
+        response.write(`data: ${JSON.stringify(components)}\n\n`);
+      });
+
+    response.on(CloseEventName, deregisterOnComponentsChangedHandler);
   });
 
   server.post(OrderResourcePath, (request, response) => {
