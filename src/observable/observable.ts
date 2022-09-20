@@ -22,6 +22,6 @@ export class Observable<GenericType> extends EventEmitter {
   }
 
   public set value(value: GenericType) {
-    this.emit(OnChangeEventName, JSON.stringify((this._value = value)));
+    this.emit(OnChangeEventName, (this._value = value));
   }
 }
