@@ -1,6 +1,6 @@
 import { isFramesPerSecond } from "./is-frames-per-second";
 
-const validExamples = [0, 1, 12];
+const validExamples = [1, 2, 12, 24, 30, 60, 120];
 
 const invalidExamples = [false, "hello", 0, -1];
 
