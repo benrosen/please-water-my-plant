@@ -160,6 +160,41 @@ describe("The createApi function", () => {
                 });
               });
             });
+
+            describe("should deregister an event handler", () => {
+              test("after a client disconnects", (done) => {
+                const mockDeregisterFunction = jest.fn();
+
+                const api = createApi({
+                  onOrderPosted: mockOnOrderPosted,
+                  registerOnComponentsChangedHandler: () => {
+                    return mockDeregisterFunction;
+                  },
+                });
+
+                const apiTestHarness = createApiTestHarness(api);
+
+                const componentsEndpointTestHarness = apiTestHarness.get(
+                  ComponentsResourcePath
+                );
+
+                const eventSource = new EventSource(
+                  componentsEndpointTestHarness.url
+                );
+
+                eventSource.onopen = async () => {
+                  expect(mockDeregisterFunction).not.toHaveBeenCalled();
+
+                  eventSource.close();
+
+                  await new Promise((resolve) => setTimeout(resolve, 1000));
+
+                  expect(mockDeregisterFunction).toHaveBeenCalled();
+
+                  done();
+                };
+              });
+            });
           });
         });
       });
