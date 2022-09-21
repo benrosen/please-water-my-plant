@@ -13,13 +13,6 @@ const mockOnOrderPosted = jest.fn();
 
 const mockRegisterOnComponentsChangedHandler = jest.fn();
 
-jest.mock("../respond-with-component-updates", () => {
-  return {
-    ...jest.requireActual("../respond-with-component-updates"),
-    respondWithComponentUpdates: jest.fn(),
-  };
-});
-
 describe("The createApi function", () => {
   describe("should return an api", () => {
     describe("that", () => {
