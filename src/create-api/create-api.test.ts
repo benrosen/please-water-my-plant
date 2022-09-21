@@ -130,6 +130,7 @@ describe("The createApi function", () => {
                       handleOnComponentsChanged
                     ) => {
                       onComponentsChanged = handleOnComponentsChanged;
+                      return jest.fn();
                     },
                   });
 
