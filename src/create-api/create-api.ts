@@ -4,6 +4,8 @@ import * as express from "express";
 import {CloseEventName} from "../close-event-name";
 import {Component} from "../component";
 import {ComponentsResourcePath} from "../components-resource-path";
+import {HomePage} from "../home-page";
+import {HomePagePath} from "../home-page-path";
 import {OkStatusCode} from "../ok-status-code";
 import {Order} from "../order";
 import {OrderResourcePath} from "../order-resource-path";
@@ -14,7 +16,7 @@ import {respondWithInternalServerError} from "../respond-with-internal-server-er
 import {ServerSentEventHeaders} from "../server-sent-event-headers";
 
 /**
- * Create an API for posting {@link Order} objects and getting {@link Component} updates.
+ * Create an API for posting {@link Order} objects, getting {@link Component} updates, and serving HTML pages.
  * @param params The config options
  * @param params.onOrderPosted A callback function to handle each newly posted {@link Order}.
  * @param params.registerOnComponentsChangedHandler A higher-order function that registers a callback that can send {@link Component} updates via server-sent events.
@@ -35,6 +37,10 @@ export const createApi = ({
   server.use(bodyParser.urlencoded({ extended: false }));
 
   server.use(cors());
+
+  server.get(HomePagePath, (request, response) => {
+    response.send(HomePage);
+  });
 
   server.get(ComponentsResourcePath, (request, response) => {
     response.writeHead(OkStatusCode, ServerSentEventHeaders);
