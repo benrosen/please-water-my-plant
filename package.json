@@ -2,6 +2,7 @@
   "name": "monster-mashup",
   "version": "1.0.0",
   "scripts": {
+    "start": "ts-node -e 'require(\"./src/start-server\").startServer()'",
     "test": "jest"
   },
   "config": {
