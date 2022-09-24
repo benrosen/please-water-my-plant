@@ -4,6 +4,10 @@
   "scripts": {
     "test": "jest"
   },
+  "config": {
+    "framesPerSecond": 2,
+    "port": 8080
+  },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
     "@types/cors": "^2.8.12",
