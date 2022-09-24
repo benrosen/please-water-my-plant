@@ -15,7 +15,17 @@ export const getComponentsByCustomIndex = <GenericType>({
   componentIndex: ComponentIndex;
   indexName: string;
 }): (Component & GenericType)[] => {
-  return componentIndex.custom[indexName].map((componentId) => {
-    return getComponent<GenericType>({ componentId, componentIndex });
-  });
+  const customIndex = componentIndex.custom[indexName];
+
+  if (customIndex) {
+    return customIndex.map((componentId) => {
+      return getComponent<GenericType>({ componentId, componentIndex });
+    });
+  } else {
+    console.warn(`No custom index named ${indexName} was found.`);
+
+    console.log("Returning an empty Component array.");
+
+    return [];
+  }
 };
