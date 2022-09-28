@@ -14,7 +14,6 @@ describe("The getComponent function", () => {
       },
       { entityId: "foo", id: "bar" },
     ],
-    [{}, { entityId: "", id: "" }],
   ] as [Parameters<typeof getComponent>[0], ReturnType<typeof getComponent>][])(
     "should return the expected result.",
     (validExample, expectedResult) => {
