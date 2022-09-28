@@ -59,7 +59,7 @@ describe("The generic Observable class", () => {
           const observable = new Observable(initialValue);
 
           observable.on(OnChangeEventName, (event) => {
-            expect(JSON.parse(event)).toStrictEqual(nextValue);
+            expect(event).toStrictEqual(nextValue);
           });
 
           observable.value = nextValue;
