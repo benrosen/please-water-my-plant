@@ -12,7 +12,18 @@ const validExamples = [
   { x: -567.89, y: 8 },
 ];
 
-const invalidExamples = [{ entity: "foo" }, { id: "bar" }];
+const invalidExamples = [
+  { entity: "foo" },
+  { id: "bar" },
+  false,
+  "baz",
+  123,
+  { x: 0 },
+  { y: 92 },
+  { x: 15, y: "foo" },
+  { x: false, y: 1 },
+  { x: "bar", y: "baz" },
+];
 
 describe("The isAcceleration type-guard function", () => {
   describe("should return true", () => {
