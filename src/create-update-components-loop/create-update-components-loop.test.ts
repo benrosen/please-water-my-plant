@@ -17,7 +17,7 @@ describe("The createUpdateComponentsLoop function", () => {
       jest.useFakeTimers();
     });
 
-    test.each([1, 2, 24, 30, 60])(
+    test.each([1, 2, 24, 30])(
       "the expected number of times per second",
       (framesPerSecond) => {
         createUpdateComponentsLoop({
