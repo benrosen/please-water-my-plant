@@ -1,20 +1,26 @@
 import { isComponent } from "./is-component";
 
+const validExamples = [{ entityId: "foo", id: "foo" }];
+
+const invalidExamples = [{ id: 0 }, { entity: { id: "foo" } }];
+
 describe("The isComponent type-guard function", () => {
   describe("should return true", () => {
-    test.each([{ entityId: "foo", id: "foo" }])(
-      "when the given value, %j, is a valid component",
+    test.each(validExamples)(
+      "when the given value, %j, implements the Component interface",
       (validValue) => {
-        expect(isComponent(validValue)).toBeTruthy();
+        const result = isComponent(validValue);
+        expect(result).toBeTruthy();
       }
     );
   });
 
   describe("should return false", () => {
-    test.each([{ id: 0 }, { entity: { id: "foo" } }])(
-      "when the given value, %j, is not a valid component",
+    test.each(invalidExamples)(
+      "when the given value, %j, does not implement the Component interface",
       (invalidValue) => {
-        expect(isComponent(invalidValue)).toBeFalsy();
+        const result = isComponent(invalidValue);
+        expect(result).toBeFalsy();
       }
     );
   });
