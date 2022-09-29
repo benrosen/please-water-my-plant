@@ -9,7 +9,7 @@ import {OnChangeEventName} from "../on-change-event-name";
 import {Order} from "../order";
 
 /**
- * Create a game server that allows clients to update the game via POST requests and subscribe to game state changes via server-sent events.
+ * Create a game server that allows clients to update the game via POST requests, subscribe to game state changes via server-sent events, and visit HTML pages.
  * @param params The config options
  * @param params.framesPerSecond The number of times per second to update the state of the game
  * @param params.getNewComponents A callback function that derives the next state of the game.
