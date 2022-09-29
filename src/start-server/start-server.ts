@@ -5,6 +5,7 @@ import {getNewComponents} from "../get-new-components";
 
 /**
  * Start a game server using the configuration settings in the project's package file.
+ * Return a callback that stops the game server.
  */
 export const startServer = (): (() => Promise<void>) => {
   const { framesPerSecond, port } = config;
