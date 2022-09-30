@@ -10,7 +10,7 @@ describe("The isComponent type-guard function", () => {
       "when the given value, %j, implements the Component interface",
       (validValue) => {
         const result = isComponent(validValue);
-        expect(result).toBeTruthy();
+        expect(result).toStrictEqual(true);
       }
     );
   });
@@ -20,7 +20,7 @@ describe("The isComponent type-guard function", () => {
       "when the given value, %j, does not implement the Component interface",
       (invalidValue) => {
         const result = isComponent(invalidValue);
-        expect(result).toBeFalsy();
+        expect(result).toStrictEqual(false);
       }
     );
   });

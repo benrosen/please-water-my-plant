@@ -25,7 +25,7 @@ describe("The isComponentIndex function", () => {
       "when the given value, %j, implements the ComponentIndex interface",
       (validValue) => {
         const result = isComponentIndex(validValue);
-        expect(result).toBeTruthy();
+        expect(result).toStrictEqual(true);
       }
     );
   });
@@ -35,7 +35,7 @@ describe("The isComponentIndex function", () => {
       "when the given value, %j, does not implement the ComponentIndex interface",
       (invalidValue) => {
         const result = isComponentIndex(invalidValue);
-        expect(result).toBeFalsy();
+        expect(result).toStrictEqual(false);
       }
     );
   });
