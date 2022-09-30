@@ -1,22 +1,26 @@
 import { isIdentifiedBy } from "./is-identified-by";
 
+const validExamples = [{ id: "foo" }, { id: "bar" }];
+
+const invalidExamples = [{ foo: "bar" }, { id: { foo: "bar" } }, { id: 0 }];
+
 describe("The isIdentifiedBy type-guard function", () => {
   describe("should return true", () => {
-    test.each([{ id: "foo" }, { id: "bar" }])(
+    test.each(validExamples)(
       "when the given value, %j, implements the isIdentifiedBy interface",
       (validValue) => {
-        const implementsIsIdentifiedBy = isIdentifiedBy(validValue);
-        expect(implementsIsIdentifiedBy).toBeTruthy();
+        const result = isIdentifiedBy(validValue);
+        expect(result).toStrictEqual(true);
       }
     );
   });
 
   describe("should return false", () => {
-    test.each([{ foo: "bar" }, { id: { foo: "bar" } }, { id: 0 }])(
+    test.each(invalidExamples)(
       "when the given value, %j, does not implement the isIdentifiedBy interface",
       (invalidValue) => {
-        const implementsIsIdentifiedBy = isIdentifiedBy(invalidValue);
-        expect(implementsIsIdentifiedBy).toBeFalsy();
+        const result = isIdentifiedBy(invalidValue);
+        expect(result).toStrictEqual(false);
       }
     );
   });
