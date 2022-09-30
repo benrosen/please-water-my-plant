@@ -1,22 +1,26 @@
 import { isIdentifier } from "./is-identifier";
 
+const validExamples = ["foo"];
+
+const invalidExamples = [""];
+
 describe("The isIdentifier type-guard function", () => {
   describe("should return true", () => {
-    test.each(["foo"])(
+    test.each(validExamples)(
       "when the given value, %j, is a valid identifier",
       (validIdentifier) => {
-        const isValidIdentifier = isIdentifier(validIdentifier);
-        expect(isValidIdentifier).toBeTruthy();
+        const result = isIdentifier(validIdentifier);
+        expect(result).toStrictEqual(true);
       }
     );
   });
 
   describe("should return false", () => {
-    test.each([""])(
+    test.each(invalidExamples)(
       "when the given value, %j, is an invalid identifier",
       (invalidIdentifier) => {
-        const isValidIdentifier = isIdentifier(invalidIdentifier);
-        expect(isValidIdentifier).toBeFalsy();
+        const result = isIdentifier(invalidIdentifier);
+        expect(result).toStrictEqual(false);
       }
     );
   });
