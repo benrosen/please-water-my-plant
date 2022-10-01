@@ -1,4 +1,4 @@
-import {isGuid} from "../guid";
+import {isUuid} from "../uuid";
 import {Identifier} from "./identifier";
 
 /**
@@ -6,5 +6,5 @@ import {Identifier} from "./identifier";
  * @param value A value of `unknown` type.
  */
 export const isIdentifier = (value: unknown): value is Identifier => {
-  return isGuid(value);
+  return isUuid(value);
 };

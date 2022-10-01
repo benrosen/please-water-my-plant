@@ -1,15 +1,15 @@
-import { isIdentifiedByGuid } from "./is-identified-by-guid";
+import { isIdentifiedByUuid } from "./is-identified-by-uuid";
 
 const validExamples = [{ id: "foo" }];
 
 const invalidExamples = [{ id: 0 }];
 
-describe("The isIdentifiedByGuid type-guard function", () => {
+describe("The isIdentifiedByUuid type-guard function", () => {
   describe("should return true", () => {
     test.each(validExamples)(
-      "when the given value, %j, implements the IdentifiedByGuid interface",
+      "when the given value, %j, implements the IdentifiedByUuid interface",
       (validValue) => {
-        const result = isIdentifiedByGuid(validValue);
+        const result = isIdentifiedByUuid(validValue);
         expect(result).toStrictEqual(true);
       }
     );
@@ -17,9 +17,9 @@ describe("The isIdentifiedByGuid type-guard function", () => {
 
   describe("should return false", () => {
     test.each(invalidExamples)(
-      "when the given value, %j, does not implement the IdentifiedByGuid interface",
+      "when the given value, %j, does not implement the IdentifiedByUuid interface",
       (invalidValue) => {
-        const result = isIdentifiedByGuid(invalidValue);
+        const result = isIdentifiedByUuid(invalidValue);
         expect(result).toStrictEqual(false);
       }
     );

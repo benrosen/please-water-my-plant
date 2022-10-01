@@ -1,8 +1,8 @@
 import { Acceleration } from "../acceleration";
 import { Component } from "../component";
 import { ComponentIndex } from "../component-index";
-import { Guid } from "../guid";
 import { Kinematic } from "../kinematic";
+import { Uuid } from "../uuid";
 import { accelerate } from "./accelerate";
 
 describe("The accelerate function", () => {
@@ -37,7 +37,7 @@ describe("The accelerate function", () => {
         byEntityId: { foo: ["bar"] },
       },
     ],
-  ] as [{ acceleration: Acceleration; componentIndex: ComponentIndex<Kinematic & Component>; componentIds: Guid[] }, ComponentIndex<Kinematic & Component>][])(
+  ] as [{ acceleration: Acceleration; componentIndex: ComponentIndex<Kinematic & Component>; componentIds: Uuid[] }, ComponentIndex<Kinematic & Component>][])(
     "should return the expected result.",
     (validExample, expectedResult) => {
       const result = accelerate(validExample);

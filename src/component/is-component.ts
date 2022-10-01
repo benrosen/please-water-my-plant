@@ -1,5 +1,5 @@
 import {isEntityRelated} from "../entity-related";
-import {isIdentifiedByGuid} from "../identified-by-guid";
+import {isIdentifiedByUuid} from "../identified-by-uuid";
 import {Component} from "./component";
 
 /**
@@ -7,5 +7,5 @@ import {Component} from "./component";
  * @param value A value of `unknown` type.
  */
 export const isComponent = (value: unknown): value is Component => {
-  return isIdentifiedByGuid(value) && isEntityRelated(value);
+  return isIdentifiedByUuid(value) && isEntityRelated(value);
 };
