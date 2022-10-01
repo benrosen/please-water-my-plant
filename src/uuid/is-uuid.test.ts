@@ -13,7 +13,12 @@ const validUuids: Uuid[] = [
   "F2A89820-2FCF-4532-AD2A-671600E475DC",
 ];
 
-const invalidGuids = [""];
+const invalidUuids = [
+  "",
+  "08bb5cc6",
+  "c851382d-4f20",
+  "4245-b0ca-0532b6dcd99c",
+];
 
 describe("The isGuid type-guard function", () => {
   describe("should return true", () => {
