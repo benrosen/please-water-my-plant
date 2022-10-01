@@ -1,6 +1,6 @@
-import {Guid} from "../guid";
+import {Uuid} from "../uuid";
 
 /**
  * An object that can be used as an identifier.
  */
-export type Identifier = Guid;
+export type Identifier = Uuid;

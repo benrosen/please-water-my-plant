@@ -1,4 +1,5 @@
-import { isGuid } from "./is-guid";
+import { isUuid } from "./is-uuid";
+import { Uuid } from "./uuid";
 
 const validUuids: Uuid[] = [
   "c851382d-4f20-4245-b0ca-0532b6dcd99c",
@@ -20,23 +21,23 @@ const invalidUuids = [
   "4245-b0ca-0532b6dcd99c",
 ];
 
-describe("The isGuid type-guard function", () => {
+describe("The isUuid type-guard function", () => {
   describe("should return true", () => {
-    test.each(validGuids)(
-      "when the given value, %j, is a VALID guid",
-      (validGuid) => {
-        const isValidGuid = isGuid(validGuid);
-        expect(isValidGuid).toBeTruthy();
+    test.each(validUuids)(
+      "when the given value, %j, is a VALID uuid",
+      (validUuid) => {
+        const result = isUuid(validUuid);
+        expect(result).toStrictEqual(true);
       }
     );
   });
 
   describe("should return false", () => {
-    test.each(invalidGuids)(
-      "when the given value, %j, is an INVALID guid",
-      (invalidGuid) => {
-        const isValidGuid = isGuid(invalidGuid);
-        expect(isValidGuid).toBeFalsy();
+    test.each(invalidUuids)(
+      "when the given value, %j, is an INVALID uuid",
+      (invalidUuid) => {
+        const result = isUuid(invalidUuid);
+        expect(result).toStrictEqual(false);
       }
     );
   });

@@ -1,6 +1,6 @@
 import {Component} from "../component";
 import {ComponentIndex} from "../component-index";
-import {Guid} from "../guid";
+import {Uuid} from "../uuid";
 
 /**
  * Retrieve a generic {@link Component} by id from a {@link ComponentIndex}.
@@ -12,7 +12,7 @@ export const getComponent = <GenericType extends Record<string, any>>({
   componentId,
   componentIndex,
 }: {
-  componentId: Guid;
+  componentId: Uuid;
   componentIndex: ComponentIndex;
 }): Component & GenericType => {
   return componentIndex.byComponentId[componentId] as Component & GenericType;

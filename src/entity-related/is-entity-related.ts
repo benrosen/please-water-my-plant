@@ -1,4 +1,4 @@
-import {isGuid} from "../guid";
+import {isUuid} from "../uuid";
 import {EntityRelated} from "./entity-related";
 
 /**
@@ -6,5 +6,5 @@ import {EntityRelated} from "./entity-related";
  * @param value A value of `unknown` type.
  */
 export const isEntityRelated = (value: unknown): value is EntityRelated => {
-  return isGuid(value["entityId"]);
+  return isUuid(value["entityId"]);
 };
