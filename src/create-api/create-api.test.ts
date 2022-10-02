@@ -1,6 +1,6 @@
 import * as EventSource from "eventsource";
 import * as createApiTestHarness from "supertest";
-import { AcceptedStatusCode } from "../accepted-status-code";
+import { ACCEPTED_STATUS_CODE } from "../accepted-status-code";
 import { BadRequestErrorStatusCode } from "../bad-request-error-status-code";
 import { Component } from "../component";
 import { ComponentsResourcePath } from "../components-resource-path";
@@ -20,7 +20,7 @@ describe("The createApi function", () => {
         describe("order", () => {
           describe("that", () => {
             describe("should return", () => {
-              describe(AcceptedStatusCode, () => {
+              describe(ACCEPTED_STATUS_CODE, () => {
                 test.each([
                   {
                     id: "5F6461B8-B322-4AA4-8AA4-05BCA0E501B2",
@@ -46,7 +46,7 @@ describe("The createApi function", () => {
                     );
 
                     expect(postOrderResponse.statusCode).toStrictEqual(
-                      AcceptedStatusCode
+                      ACCEPTED_STATUS_CODE
                     );
                   }
                 );
