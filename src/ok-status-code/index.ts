@@ -1,1 +1,1 @@
-export { OkStatusCode } from "./ok-status-code";
+export { OkStatusCode, OK_STATUS_CODE } from "./ok-status-code";
