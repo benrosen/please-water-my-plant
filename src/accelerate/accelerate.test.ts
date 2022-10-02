@@ -12,29 +12,35 @@ describe("The accelerate function", () => {
         acceleration: { x: 1, y: 1 },
         componentIndex: {
           byComponentId: {
-            bar: {
-              entityId: "foo",
-              id: "bar",
+            "3190731E-1071-48B7-9230-20160C9AEBE0": {
+              entityId: "42EEE21E-EA1F-4D1E-9D96-4D9FB5892AAF",
+              id: "3190731E-1071-48B7-9230-20160C9AEBE0",
               velocity: { x: 0, y: 0 },
               acceleration: { x: 0, y: 0 },
             },
           },
           byEntityId: {
-            foo: ["bar"],
+            "42EEE21E-EA1F-4D1E-9D96-4D9FB5892AAF": [
+              "3190731E-1071-48B7-9230-20160C9AEBE0",
+            ],
           },
         },
-        componentIds: ["bar"],
+        componentIds: ["3190731E-1071-48B7-9230-20160C9AEBE0"],
       },
       {
         byComponentId: {
-          bar: {
-            entityId: "foo",
-            id: "bar",
+          "3190731E-1071-48B7-9230-20160C9AEBE0": {
+            entityId: "42EEE21E-EA1F-4D1E-9D96-4D9FB5892AAF",
+            id: "3190731E-1071-48B7-9230-20160C9AEBE0",
             velocity: { x: 1, y: 1 },
             acceleration: { x: 0, y: 0 },
           },
         },
-        byEntityId: { foo: ["bar"] },
+        byEntityId: {
+          "42EEE21E-EA1F-4D1E-9D96-4D9FB5892AAF": [
+            "3190731E-1071-48B7-9230-20160C9AEBE0",
+          ],
+        },
       },
     ],
   ] as [{ acceleration: Acceleration; componentIndex: ComponentIndex<Kinematic & Component>; componentIds: Uuid[] }, ComponentIndex<Kinematic & Component>][])(

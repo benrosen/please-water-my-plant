@@ -10,21 +10,27 @@ describe("The getComponentsByCustomIndex function", () => {
       {
         componentIndex: {
           byComponentId: {
-            bar: { entityId: "foo", id: "bar", color: "foreground" },
+            "983C7162-0CF2-4CAD-8526-0A8ED3758E2A": {
+              entityId: "EC6F9C6F-C658-40BA-AC0C-33CE603B6C6D",
+              id: "983C7162-0CF2-4CAD-8526-0A8ED3758E2A",
+              color: "foreground",
+            },
           },
           byEntityId: {
-            foo: ["bar"],
+            "EC6F9C6F-C658-40BA-AC0C-33CE603B6C6D": [
+              "983C7162-0CF2-4CAD-8526-0A8ED3758E2A",
+            ],
           },
           custom: {
-            isForegroundColored: ["bar"],
+            isForegroundColored: ["983C7162-0CF2-4CAD-8526-0A8ED3758E2A"],
           },
         },
         indexName: "isForegroundColored",
       },
       [
         {
-          entityId: "foo",
-          id: "bar",
+          entityId: "EC6F9C6F-C658-40BA-AC0C-33CE603B6C6D",
+          id: "983C7162-0CF2-4CAD-8526-0A8ED3758E2A",
           color: "foreground",
         },
       ],

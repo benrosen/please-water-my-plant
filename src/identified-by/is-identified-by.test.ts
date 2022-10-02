@@ -1,6 +1,9 @@
 import { isIdentifiedBy } from "./is-identified-by";
 
-const validExamples = [{ id: "foo" }, { id: "bar" }];
+const validExamples = [
+  { id: "36955F34-2B2B-419B-918A-65357C55151F" },
+  { id: "BEAB542D-5383-4C51-891E-7762D8D25A9B" },
+];
 
 const invalidExamples = [{ foo: "bar" }, { id: { foo: "bar" } }, { id: 0 }];
 

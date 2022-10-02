@@ -1,6 +1,6 @@
 import { isEntityRelated } from "./is-entity-related";
 
-const validExamples = [{ entityId: "foo" }];
+const validExamples = [{ entityId: "E99B677C-2C29-46B6-91D1-A57296699EC8" }];
 
 const invalidExamples = [{ entity: "foo" }, { id: "bar" }];
 

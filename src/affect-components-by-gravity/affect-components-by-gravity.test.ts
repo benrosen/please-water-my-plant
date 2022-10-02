@@ -9,33 +9,41 @@ describe("The affectComponentsByGravity function", () => {
       {
         componentIndex: {
           byComponentId: {
-            bar: {
-              entityId: "foo",
-              id: "bar",
+            "E8547843-451A-4752-B1A5-D3515A8305C7": {
+              entityId: "950C008D-A647-45B2-B182-C85B9AFC1755",
+              id: "E8547843-451A-4752-B1A5-D3515A8305C7",
               acceleration: { x: 0, y: 0 },
               affectedByGravity: true,
               velocity: { x: 0, y: 0 },
             },
           },
-          byEntityId: { foo: ["bar"] },
+          byEntityId: {
+            "950C008D-A647-45B2-B182-C85B9AFC1755": [
+              "E8547843-451A-4752-B1A5-D3515A8305C7",
+            ],
+          },
           custom: {
-            isAffectedByGravity: ["bar"],
+            isAffectedByGravity: ["E8547843-451A-4752-B1A5-D3515A8305C7"],
           },
         },
       },
       {
         byComponentId: {
-          bar: {
-            entityId: "foo",
-            id: "bar",
+          "E8547843-451A-4752-B1A5-D3515A8305C7": {
+            entityId: "950C008D-A647-45B2-B182-C85B9AFC1755",
+            id: "E8547843-451A-4752-B1A5-D3515A8305C7",
             acceleration: { x: 0, y: 0 },
             affectedByGravity: true,
             velocity: { x: 0, y: -9.8 },
           },
         },
-        byEntityId: { foo: ["bar"] },
+        byEntityId: {
+          "950C008D-A647-45B2-B182-C85B9AFC1755": [
+            "E8547843-451A-4752-B1A5-D3515A8305C7",
+          ],
+        },
         custom: {
-          isAffectedByGravity: ["bar"],
+          isAffectedByGravity: ["E8547843-451A-4752-B1A5-D3515A8305C7"],
         },
       },
     ],

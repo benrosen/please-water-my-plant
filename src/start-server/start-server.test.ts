@@ -19,8 +19,8 @@ describe("The startServer function", () => {
               const stopServer = startServer();
 
               const data: Order = {
-                entityId: "foo",
-                id: "bar",
+                entityId: "6C75AB0F-EB42-484E-9159-008D99127697",
+                id: "578D9FCE-89F7-41A1-9074-E6CE8F338C0F",
                 timestamp: 0,
               };
 

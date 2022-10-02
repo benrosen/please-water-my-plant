@@ -6,15 +6,15 @@ describe("The parseOrderFromRequest function", () => {
       {
         request: {
           body: {
-            id: "foo",
-            entityId: "bar",
+            id: "2515934A-F479-4785-8760-62366BD5CB13",
+            entityId: "213C4A66-8C0F-4CDA-A684-3FD967A5DF5A",
             timestamp: 0,
           },
         },
       },
       {
-        id: "foo",
-        entityId: "bar",
+        id: "2515934A-F479-4785-8760-62366BD5CB13",
+        entityId: "213C4A66-8C0F-4CDA-A684-3FD967A5DF5A",
         timestamp: 0,
       },
     ],
