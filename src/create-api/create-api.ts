@@ -6,7 +6,7 @@ import {Component} from "../component";
 import {ComponentsResourcePath} from "../components-resource-path";
 import {HomePage} from "../home-page";
 import {HomePagePath} from "../home-page-path";
-import {OkStatusCode} from "../ok-status-code";
+import {OK_STATUS_CODE} from "../ok-status-code";
 import {Order} from "../order";
 import {OrderResourcePath} from "../order-resource-path";
 import {parseOrderFromRequest} from "../parse-order-from-request";
@@ -43,7 +43,7 @@ export const createApi = ({
   });
 
   server.get(ComponentsResourcePath, (request, response) => {
-    response.writeHead(OkStatusCode, ServerSentEventHeaders);
+    response.writeHead(OK_STATUS_CODE, ServerSentEventHeaders);
 
     response.flushHeaders();
 
