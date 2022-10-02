@@ -1,6 +1,6 @@
 import { isIdentifier } from "./is-identifier";
 
-const validExamples = ["foo"];
+const validExamples = ["C63B397E-AF40-43C3-81C8-3F14A86EB7EE"];
 
 const invalidExamples = [""];
 

@@ -23,8 +23,8 @@ describe("The createApi function", () => {
               describe(AcceptedStatusCode, () => {
                 test.each([
                   {
-                    id: "foo",
-                    entityId: "bar",
+                    id: "5F6461B8-B322-4AA4-8AA4-05BCA0E501B2",
+                    entityId: "C606CEAD-287D-4FA1-81F5-531A36BF93C5",
                     timestamp: 0,
                   },
                 ] as Order[])(
@@ -54,10 +54,17 @@ describe("The createApi function", () => {
 
               describe(BadRequestErrorStatusCode, () => {
                 test.each([
-                  "foo",
+                  "5F6461B8-B322-4AA4-8AA4-05BCA0E501B2",
                   { id: 123 },
-                  { id: "foo", entityId: "bar" },
-                  { id: "foo", entityId: "bar", timestamp: "baz" },
+                  {
+                    id: "5F6461B8-B322-4AA4-8AA4-05BCA0E501B2",
+                    entityId: "C606CEAD-287D-4FA1-81F5-531A36BF93C5",
+                  },
+                  {
+                    id: "5F6461B8-B322-4AA4-8AA4-05BCA0E501B2",
+                    entityId: "C606CEAD-287D-4FA1-81F5-531A36BF93C5",
+                    timestamp: "baz",
+                  },
                 ] as (string | object)[])(
                   "when given an invalid request: %j",
                   async (invalidRequest) => {
@@ -101,8 +108,8 @@ describe("The createApi function", () => {
                     apiTestHarness.post(OrderResourcePath);
 
                   const order: Order = {
-                    id: "foo",
-                    entityId: "bar",
+                    id: "5F6461B8-B322-4AA4-8AA4-05BCA0E501B2",
+                    entityId: "C606CEAD-287D-4FA1-81F5-531A36BF93C5",
                     timestamp: 0,
                   };
 
@@ -144,7 +151,12 @@ describe("The createApi function", () => {
                     componentsEndpointTestHarness.url
                   );
 
-                  const components = [{ id: "foo", entityId: "bar" }];
+                  const components: Component[] = [
+                    {
+                      id: "5F6461B8-B322-4AA4-8AA4-05BCA0E501B2",
+                      entityId: "C606CEAD-287D-4FA1-81F5-531A36BF93C5",
+                    },
+                  ];
 
                   eventSource.onopen = () => {
                     onComponentsChanged(components);

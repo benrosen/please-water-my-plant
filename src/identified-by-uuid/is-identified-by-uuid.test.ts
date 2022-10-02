@@ -1,6 +1,6 @@
 import { isIdentifiedByUuid } from "./is-identified-by-uuid";
 
-const validExamples = [{ id: "foo" }];
+const validExamples = [{ id: "566132FE-331E-432B-9A95-9DC672735451" }];
 
 const invalidExamples = [{ id: 0 }];
 

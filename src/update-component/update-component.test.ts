@@ -9,28 +9,36 @@ describe("The updateComponent function", () => {
       {
         componentIndex: {
           byComponentId: {
-            bar: { entityId: "foo", id: "bar", color: "foreground" },
+            "360D7685-F026-4B75-B814-BDEFAF18A441": {
+              entityId: "752A3387-FA59-469F-8929-E0A1F8EFDC49",
+              id: "360D7685-F026-4B75-B814-BDEFAF18A441",
+              color: "foreground",
+            },
           },
           byEntityId: {
-            foo: ["bar"],
+            "752A3387-FA59-469F-8929-E0A1F8EFDC49": [
+              "360D7685-F026-4B75-B814-BDEFAF18A441",
+            ],
           },
         },
         component: {
-          entityId: "foo",
-          id: "bar",
+          entityId: "752A3387-FA59-469F-8929-E0A1F8EFDC49",
+          id: "360D7685-F026-4B75-B814-BDEFAF18A441",
           color: "background",
         },
       },
       {
         byComponentId: {
-          bar: {
-            entityId: "foo",
-            id: "bar",
+          "360D7685-F026-4B75-B814-BDEFAF18A441": {
+            entityId: "752A3387-FA59-469F-8929-E0A1F8EFDC49",
+            id: "360D7685-F026-4B75-B814-BDEFAF18A441",
             color: "background",
           },
         },
         byEntityId: {
-          foo: ["bar"],
+          "752A3387-FA59-469F-8929-E0A1F8EFDC49": [
+            "360D7685-F026-4B75-B814-BDEFAF18A441",
+          ],
         },
       },
     ],

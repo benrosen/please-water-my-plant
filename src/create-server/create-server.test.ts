@@ -17,8 +17,8 @@ describe("The createServer function", () => {
                 expectedComponentUpdates: [
                   [
                     {
-                      entityId: "foo",
-                      id: "bar",
+                      entityId: "D9CE2A14-89A3-4C6B-8E34-1810FF366E23",
+                      id: "E17EA1AB-4FFB-45AF-BE3E-9257F614080E",
                     },
                   ],
                 ],
@@ -27,22 +27,22 @@ describe("The createServer function", () => {
                 expectedComponentUpdates: [
                   [
                     {
-                      entityId: "foo",
-                      id: "bar",
+                      entityId: "D9CE2A14-89A3-4C6B-8E34-1810FF366E23",
+                      id: "E17EA1AB-4FFB-45AF-BE3E-9257F614080E",
                     },
                     {
-                      entityId: "foo",
-                      id: "bar",
+                      entityId: "D9CE2A14-89A3-4C6B-8E34-1810FF366E23",
+                      id: "E17EA1AB-4FFB-45AF-BE3E-9257F614080E",
                     },
                   ],
                   [
                     {
-                      entityId: "foo",
-                      id: "bar",
+                      entityId: "D9CE2A14-89A3-4C6B-8E34-1810FF366E23",
+                      id: "E17EA1AB-4FFB-45AF-BE3E-9257F614080E",
                     },
                     {
-                      entityId: "foo",
-                      id: "bar",
+                      entityId: "D9CE2A14-89A3-4C6B-8E34-1810FF366E23",
+                      id: "E17EA1AB-4FFB-45AF-BE3E-9257F614080E",
                     },
                   ],
                 ],

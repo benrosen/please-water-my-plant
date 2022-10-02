@@ -1,6 +1,11 @@
 import { isComponent } from "./is-component";
 
-const validExamples = [{ entityId: "foo", id: "foo" }];
+const validExamples = [
+  {
+    entityId: "9537904F-E481-4346-AA6F-C7AC094BE01C",
+    id: "6B0164E7-C6E1-4B23-82E9-1894808BE1EE",
+  },
+];
 
 const invalidExamples = [{ id: 0 }, { entity: { id: "foo" } }];
 
