@@ -1,1 +1,4 @@
-export { AcceptedStatusCode } from "./accepted-status-code";
+export {
+  AcceptedStatusCode,
+  ACCEPTED_STATUS_CODE,
+} from "./accepted-status-code";
