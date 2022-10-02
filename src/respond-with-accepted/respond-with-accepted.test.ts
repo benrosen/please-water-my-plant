@@ -1,5 +1,5 @@
 import { Response } from "express";
-import { AcceptedStatusCode } from "../accepted-status-code";
+import { ACCEPTED_STATUS_CODE } from "../accepted-status-code";
 import { respondWithStatusCode } from "../respond-with-status-code";
 import { respondWithAccepted } from "./respond-with-accepted";
 
@@ -27,7 +27,7 @@ describe("The respondWithInternalServerError function", () => {
 
     expect(mockRespondWithStatusCode).toHaveBeenCalledWith({
       response: mockResponse,
-      statusCode: AcceptedStatusCode,
+      statusCode: ACCEPTED_STATUS_CODE,
     });
   });
 });

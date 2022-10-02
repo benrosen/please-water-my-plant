@@ -1,7 +1,7 @@
 import * as EventSource from "eventsource";
 import * as http from "http";
 import { config } from "../../package.json";
-import { AcceptedStatusCode } from "../accepted-status-code";
+import { ACCEPTED_STATUS_CODE } from "../accepted-status-code";
 import { ComponentsResourcePath } from "../components-resource-path";
 import { Order } from "../order";
 import { OrderResourcePath } from "../order-resource-path";
@@ -38,7 +38,9 @@ describe("The startServer function", () => {
                   },
                 },
                 async (response) => {
-                  expect(response.statusCode).toStrictEqual(AcceptedStatusCode);
+                  expect(response.statusCode).toStrictEqual(
+                    ACCEPTED_STATUS_CODE
+                  );
 
                   request.end();
 
