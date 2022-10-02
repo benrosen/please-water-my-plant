@@ -1,3 +1,5 @@
+import {isInformationStatusCode} from "../information-status-code";
+import {isSuccessfulStatusCode} from "../successful-status-code";
 import {StatusCode} from "./status-code";
 
 /**
@@ -5,5 +7,5 @@ import {StatusCode} from "./status-code";
  * @param value A value of `unknown` type.
  */
 export const isStatusCode = (value: unknown): value is StatusCode => {
-  return typeof value === "number";
+  return isInformationStatusCode(value) || isSuccessfulStatusCode(value);
 };
