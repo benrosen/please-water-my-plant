@@ -4,7 +4,7 @@ import { ACCEPTED_STATUS_CODE } from "../accepted-status-code";
 import { BadRequestErrorStatusCode } from "../bad-request-error-status-code";
 import { Component } from "../component";
 import { ComponentsResourcePath } from "../components-resource-path";
-import { InternalServerErrorStatusCode } from "../internal-server-error-status-code";
+import { INTERNAL_SERVER_ERROR_STATUS_CODE } from "../internal-server-error-status-code";
 import { Order } from "../order";
 import { OrderResourcePath } from "../order-resource-path";
 import { createApi } from "./create-api";
@@ -90,7 +90,7 @@ describe("The createApi function", () => {
                 );
               });
 
-              describe(InternalServerErrorStatusCode, () => {
+              describe(INTERNAL_SERVER_ERROR_STATUS_CODE, () => {
                 test("when onOrderPosted throws an error", async () => {
                   mockOnOrderPosted.mockImplementationOnce(() => {
                     throw new Error();
@@ -116,7 +116,7 @@ describe("The createApi function", () => {
                   const postOrderResponse = await postOrderRequest.send(order);
 
                   expect(postOrderResponse.statusCode).toStrictEqual(
-                    InternalServerErrorStatusCode
+                    INTERNAL_SERVER_ERROR_STATUS_CODE
                   );
                 });
               });
