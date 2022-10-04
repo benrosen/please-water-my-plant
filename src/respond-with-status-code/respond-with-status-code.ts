@@ -7,12 +7,14 @@ import {StatusCode} from "../status-code";
  * @param params.response The {@link Response} with which to send a status code to the client.
  * @param params.statusCode The {@link StatusCode} to send via the provided {@link Response}.
  */
-export const respondWithStatusCode = ({
+export const respondWithStatusCode = <
+  GenericStatusCode extends StatusCode = StatusCode
+>({
   response,
   statusCode,
 }: {
   response: Response;
-  statusCode: StatusCode;
+  statusCode: GenericStatusCode;
 }) => {
   response.status(statusCode);
 
