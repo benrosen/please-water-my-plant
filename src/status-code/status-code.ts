@@ -1,5 +1,7 @@
+import {ClientErrorStatusCode} from "../client-error-status-code";
 import {InformationStatusCode} from "../information-status-code";
 import {RedirectionStatusCode} from "../redirection-status-code";
+import {ServerErrorStatusCode} from "../server-error-status-code";
 import {SuccessfulStatusCode} from "../successful-status-code";
 
 /**
@@ -9,4 +11,6 @@ import {SuccessfulStatusCode} from "../successful-status-code";
 export type StatusCode =
   | InformationStatusCode
   | SuccessfulStatusCode
-  | RedirectionStatusCode;
+  | RedirectionStatusCode
+  | ClientErrorStatusCode
+  | ServerErrorStatusCode;
