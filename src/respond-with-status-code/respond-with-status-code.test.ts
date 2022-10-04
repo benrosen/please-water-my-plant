@@ -10,7 +10,7 @@ const mockResponse = {
   status: mockStatus,
 } as unknown as Response;
 
-const mockStatusCode = 123;
+const mockStatusCode = 200;
 
 describe("The respondWithStatusCode function", () => {
   respondWithStatusCode({
