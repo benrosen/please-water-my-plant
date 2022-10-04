@@ -47,6 +47,48 @@ describe("The affectComponentsByGravity function", () => {
         },
       },
     ],
+    [
+      {
+        componentIndex: {
+          byComponentId: {
+            "B12D2372-9CB3-4E5B-834D-D85B81C18707": {
+              entityId: "4698D1BB-3038-4FE2-9BA6-31899C003D4C",
+              id: "B12D2372-9CB3-4E5B-834D-D85B81C18707",
+              acceleration: { x: 0, y: 0 },
+              affectedByGravity: true,
+              velocity: { x: 3.2, y: 10 },
+            },
+          },
+          byEntityId: {
+            "4698D1BB-3038-4FE2-9BA6-31899C003D4C": [
+              "B12D2372-9CB3-4E5B-834D-D85B81C18707",
+            ],
+          },
+          custom: {
+            isAffectedByGravity: ["B12D2372-9CB3-4E5B-834D-D85B81C18707"],
+          },
+        },
+      },
+      {
+        byComponentId: {
+          "B12D2372-9CB3-4E5B-834D-D85B81C18707": {
+            entityId: "4698D1BB-3038-4FE2-9BA6-31899C003D4C",
+            id: "B12D2372-9CB3-4E5B-834D-D85B81C18707",
+            acceleration: { x: 0, y: 0 },
+            affectedByGravity: true,
+            velocity: { x: 3.2, y: 0.2 },
+          },
+        },
+        byEntityId: {
+          "4698D1BB-3038-4FE2-9BA6-31899C003D4C": [
+            "B12D2372-9CB3-4E5B-834D-D85B81C18707",
+          ],
+        },
+        custom: {
+          isAffectedByGravity: ["B12D2372-9CB3-4E5B-834D-D85B81C18707"],
+        },
+      },
+    ],
   ] as [{ componentIndex: ComponentIndex<Component & AffectedByGravity> }, ComponentIndex<Component & AffectedByGravity>][])(
     "should return the expected result.",
     (validExample, expectedResult) => {
