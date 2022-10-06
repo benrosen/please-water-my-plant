@@ -2,7 +2,13 @@ import { isAffectedByGravity } from "./is-affected-by-gravity";
 
 const validExamples = [{ affectedByGravity: true }];
 
-const invalidExamples = [{ entity: "foo" }, { id: "bar" }];
+const invalidExamples = [
+  { entity: "foo" },
+  { id: "bar" },
+  { affectedByGravity: "baz" },
+  { affectedByGravity: 1 },
+  { affectedByGravity: undefined },
+];
 
 describe("The isAffectedByGravity type-guard function", () => {
   describe("should return true", () => {
