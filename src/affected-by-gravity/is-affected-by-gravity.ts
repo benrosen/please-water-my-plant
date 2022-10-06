@@ -7,5 +7,5 @@ import {AffectedByGravity} from "./affected-by-gravity";
 export const isAffectedByGravity = (
   value: unknown
 ): value is AffectedByGravity => {
-  return value && value["affectedByGravity"];
+  return value && value["affectedByGravity"] === true;
 };
