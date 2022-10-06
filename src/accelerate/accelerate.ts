@@ -1,6 +1,7 @@
 import {Acceleration} from "../acceleration";
 import {Component} from "../component";
 import {ComponentIndex} from "../component-index";
+import {fixVector} from "../fix-vector";
 import {getComponent} from "../get-component";
 import {Kinematic} from "../kinematic";
 import {updateComponent} from "../update-component";
@@ -28,14 +29,16 @@ export const accelerate = ({
       componentIndex,
     });
 
+    const velocity = fixVector({
+      x: component.velocity.x + acceleration.x,
+      y: component.velocity.y + acceleration.y,
+    });
+
     return updateComponent({
       componentIndex: reduction,
       component: {
         ...component,
-        velocity: {
-          x: component.velocity.x + acceleration.x,
-          y: component.velocity.y + acceleration.y,
-        },
+        velocity,
       },
     });
   }, componentIndex);
