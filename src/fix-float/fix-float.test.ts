@@ -1,4 +1,5 @@
-import { FIXED_POINT_DECIMAL_PLACES } from "../fixed-point-decimal-places";
+import { config } from "../../package.json";
+
 import { fixFloat } from "./fix-float";
 
 describe("The fixFloat function", () => {
@@ -7,7 +8,7 @@ describe("The fixFloat function", () => {
     (validExample) => {
       const result = fixFloat(validExample);
 
-      expect(result).toBeCloseTo(validExample, FIXED_POINT_DECIMAL_PLACES);
+      expect(result).toBeCloseTo(validExample, config.fixedPointDecimalPlaces);
     }
   );
 });
