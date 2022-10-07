@@ -7,7 +7,8 @@
   },
   "config": {
     "framesPerSecond": 2,
-    "port": 8080
+    "port": 8080,
+    "fixedPointDecimalPlaces": 5
   },
   "devDependencies": {
     "@types/body-parser": "^1.19.2",
