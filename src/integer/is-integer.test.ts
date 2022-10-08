@@ -1,4 +1,4 @@
-import { isInteger } from "./is-integer";
+import { isInteger } from "integer";
 
 const validExamples = [-1, 0, 234];
 

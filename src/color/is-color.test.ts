@@ -1,4 +1,4 @@
-import { isColor } from "./is-color";
+import { isColor } from "color";
 
 const validColors = ["blue"];
 

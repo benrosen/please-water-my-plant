@@ -1,5 +1,5 @@
-import {isUuid} from "../uuid";
-import {Identifier} from "./identifier";
+import {Identifier} from "identifier";
+import {isUuid} from "uuid";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Identifier}. Otherwise, return `false`.

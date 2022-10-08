@@ -1,4 +1,4 @@
-import {PositiveNumber} from "./positive-number";
+import {PositiveNumber} from "positive-number";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link PositiveNumber}. Otherwise, return `false`.

@@ -1,5 +1,7 @@
-import { isResetContentStatusCode } from "./is-reset-content-status-code";
-import { RESET_CONTENT_STATUS_CODE } from "./reset-content-status-code";
+import {
+  isResetContentStatusCode,
+  RESET_CONTENT_STATUS_CODE,
+} from "reset-content-status-code";
 
 const validExamples = [RESET_CONTENT_STATUS_CODE];
 

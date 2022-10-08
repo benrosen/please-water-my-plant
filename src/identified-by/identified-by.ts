@@ -1,4 +1,4 @@
-import {Identifier} from "../identifier";
+import {Identifier} from "identifier";
 
 /**
  * An object with an `id` property whose value is a generic {@link Identifier}.

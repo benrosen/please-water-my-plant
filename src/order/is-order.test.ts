@@ -1,4 +1,4 @@
-import { isOrder } from "./is-order";
+import { isOrder } from "order";
 
 const validExamples = [
   {

@@ -1,9 +1,9 @@
+import {CloseEventName} from "close-event-name";
+import {createServer} from "create-server";
+import {ErrorEventName} from "error-event-name";
+import {getIndexers} from "get-indexers";
+import {getNewComponents} from "get-new-components";
 import {config} from "../../package.json";
-import {CloseEventName} from "../close-event-name";
-import {createServer} from "../create-server";
-import {ErrorEventName} from "../error-event-name";
-import {getIndexers} from "../get-indexers";
-import {getNewComponents} from "../get-new-components";
 
 /**
  * Start a game server using the configuration settings in the project's package file.

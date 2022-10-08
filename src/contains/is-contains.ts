@@ -1,4 +1,4 @@
-import {Contains} from "./contains";
+import {Contains} from "contains";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Contains}. Otherwise, return `false`.

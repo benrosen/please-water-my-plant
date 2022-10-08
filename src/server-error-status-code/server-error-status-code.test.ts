@@ -1,5 +1,5 @@
-import { INTERNAL_SERVER_ERROR_STATUS_CODE } from "../internal-server-error-status-code";
-import { isServerErrorStatusCode } from "./is-server-error-status-code";
+import { INTERNAL_SERVER_ERROR_STATUS_CODE } from "internal-server-error-status-code";
+import { isServerErrorStatusCode } from "server-error-status-code";
 
 const validExamples = [INTERNAL_SERVER_ERROR_STATUS_CODE];
 

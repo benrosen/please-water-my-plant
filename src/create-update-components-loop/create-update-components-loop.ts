@@ -1,8 +1,8 @@
-import {Component} from "../component";
-import {ComponentIndex} from "../component-index";
-import {FramesPerSecond} from "../frames-per-second";
-import {getFrameDuration} from "../get-frame-duration";
-import {updateComponents} from "../update-components";
+import {Component} from "component";
+import {ComponentIndex} from "component-index";
+import {FramesPerSecond} from "frames-per-second";
+import {getFrameDuration} from "get-frame-duration";
+import {updateComponents} from "update-components";
 
 /**
  * Create the loop that updates the state of the game each frame.

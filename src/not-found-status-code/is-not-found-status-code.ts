@@ -1,4 +1,4 @@
-import {NOT_FOUND_STATUS_CODE, NotFoundStatusCode} from "./not-found-status-code";
+import {NOT_FOUND_STATUS_CODE, NotFoundStatusCode,} from "not-found-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link NotFoundStatusCode}. Otherwise, return `false`.

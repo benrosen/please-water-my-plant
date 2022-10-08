@@ -1,5 +1,5 @@
 import { Response } from "express";
-import { respondWithStatusCode } from "./respond-with-status-code";
+import { respondWithStatusCode } from "respond-with-status-code";
 
 const mockSend = jest.fn();
 

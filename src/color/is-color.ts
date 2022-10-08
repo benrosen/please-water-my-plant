@@ -1,4 +1,4 @@
-import {Color} from "./color";
+import {Color} from "color";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Color}. Otherwise, return `false`.

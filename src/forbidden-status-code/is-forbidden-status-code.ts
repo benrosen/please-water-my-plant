@@ -1,4 +1,4 @@
-import {FORBIDDEN_STATUS_CODE, ForbiddenStatusCode,} from "./forbidden-status-code";
+import {FORBIDDEN_STATUS_CODE, ForbiddenStatusCode,} from "forbidden-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link ForbiddenStatusCode}. Otherwise, return `false`.

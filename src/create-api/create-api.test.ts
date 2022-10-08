@@ -1,13 +1,13 @@
+import { ACCEPTED_STATUS_CODE } from "accepted-status-code";
+import { BadRequestErrorStatusCode } from "bad-request-error-status-code";
+import { Component } from "component";
+import { ComponentsResourcePath } from "components-resource-path";
+import { createApi } from "create-api";
 import * as EventSource from "eventsource";
+import { INTERNAL_SERVER_ERROR_STATUS_CODE } from "internal-server-error-status-code";
+import { Order } from "order";
+import { OrderResourcePath } from "order-resource-path";
 import * as createApiTestHarness from "supertest";
-import { ACCEPTED_STATUS_CODE } from "../accepted-status-code";
-import { BadRequestErrorStatusCode } from "../bad-request-error-status-code";
-import { Component } from "../component";
-import { ComponentsResourcePath } from "../components-resource-path";
-import { INTERNAL_SERVER_ERROR_STATUS_CODE } from "../internal-server-error-status-code";
-import { Order } from "../order";
-import { OrderResourcePath } from "../order-resource-path";
-import { createApi } from "./create-api";
 
 const mockOnOrderPosted = jest.fn();
 

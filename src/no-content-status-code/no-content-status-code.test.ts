@@ -1,5 +1,7 @@
-import { isNoContentStatusCode } from "./is-no-content-status-code";
-import { NO_CONTENT_STATUS_CODE } from "./no-content-status-code";
+import {
+  isNoContentStatusCode,
+  NO_CONTENT_STATUS_CODE,
+} from "no-content-status-code";
 
 const validExamples = [NO_CONTENT_STATUS_CODE];
 

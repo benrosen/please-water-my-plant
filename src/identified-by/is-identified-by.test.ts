@@ -1,4 +1,4 @@
-import { isIdentifiedBy } from "./is-identified-by";
+import { isIdentifiedBy } from "identified-by";
 
 const validExamples = [
   { id: "36955F34-2B2B-419B-918A-65357C55151F" },

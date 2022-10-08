@@ -1,8 +1,8 @@
-import { isProcessingStatusCode } from "./is-processing-status-code";
 import {
+  isProcessingStatusCode,
   PROCESSING_STATUS_CODE,
   ProcessingStatusCode,
-} from "./processing-status-code";
+} from "processing-status-code";
 
 const validExamples: ProcessingStatusCode[] = [PROCESSING_STATUS_CODE];
 

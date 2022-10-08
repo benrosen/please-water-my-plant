@@ -1,6 +1,6 @@
-import {isAcceleration} from "../acceleration";
-import {isVelocity} from "../velocity";
-import {Kinematic} from "./kinematic";
+import {isAcceleration} from "acceleration";
+import {Kinematic} from "kinematic";
+import {isVelocity} from "velocity";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Kinematic}. Otherwise, return `false`.

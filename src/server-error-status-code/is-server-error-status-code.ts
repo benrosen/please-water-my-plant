@@ -1,7 +1,5 @@
-import {
-  isInternalServerErrorStatusCode
-} from "../internal-server-error-status-code/is-internal-server-error-status-code";
-import {ServerErrorStatusCode} from "./server-error-status-code";
+import {isInternalServerErrorStatusCode} from "internal-server-error-status-code";
+import {ServerErrorStatusCode} from "server-error-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link ServerErrorStatusCode}. Otherwise, return `false`.

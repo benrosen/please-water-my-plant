@@ -1,7 +1,7 @@
-import { Colored } from "../colored";
-import { Component } from "../component";
-import { ComponentIndex } from "../component-index";
-import { updateComponent } from "./update-component";
+import { Colored } from "colored";
+import { Component } from "component";
+import { ComponentIndex } from "component-index";
+import { updateComponent } from "update-component";
 
 describe("The updateComponent function", () => {
   test.each([

@@ -1,4 +1,4 @@
-import {Acceleration} from "../acceleration";
+import {Acceleration} from "acceleration";
 
 /**
  * A constant value that represents the force of gravity.

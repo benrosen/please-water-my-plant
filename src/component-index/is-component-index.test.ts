@@ -1,5 +1,4 @@
-import { ComponentIndex } from "./component-index";
-import { isComponentIndex } from "./is-component-index";
+import { ComponentIndex, isComponentIndex } from "component-index";
 
 const validExamples: ComponentIndex[] = [
   {

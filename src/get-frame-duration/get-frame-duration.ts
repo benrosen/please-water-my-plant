@@ -1,5 +1,5 @@
-import {FramesPerSecond} from "../frames-per-second";
-import {Milliseconds} from "../milliseconds";
+import {FramesPerSecond} from "frames-per-second";
+import {Milliseconds} from "milliseconds";
 
 /**
  * Get the duration of a frame in {@link Milliseconds} for the given the number of {@link FramesPerSecond}

@@ -1,4 +1,4 @@
-import {Timestamp} from "./timestamp";
+import {Timestamp} from "timestamp";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Timestamp}. Otherwise, return `false`.

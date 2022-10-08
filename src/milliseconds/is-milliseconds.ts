@@ -1,4 +1,4 @@
-import {Milliseconds} from "./milliseconds";
+import {Milliseconds} from "milliseconds";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Milliseconds}. Otherwise, return `false`.

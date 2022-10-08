@@ -1,6 +1,6 @@
-import {Component} from "../component";
-import {ComponentIndex} from "../component-index";
-import {ComponentIndexer} from "../component-indexer";
+import {Component} from "component";
+import {ComponentIndex} from "component-index";
+import {ComponentIndexer} from "component-indexer";
 
 /**
  * Create a {@link ComponentIndex} from a {@link Component} array and a {@link ComponentIndexer} array.

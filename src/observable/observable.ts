@@ -1,5 +1,5 @@
+import {ChangeEventName} from "change-event-name";
 import {EventEmitter} from "events";
-import {ChangeEventName} from "../change-event-name";
 
 /**
  * An object that emits a `change` event whenever its value changes.

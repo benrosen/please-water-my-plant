@@ -1,4 +1,4 @@
-import { isIdentifiedByUuid } from "./is-identified-by-uuid";
+import { isIdentifiedByUuid } from "identified-by-uuid";
 
 const validExamples = [
   { id: "36955F34-2B2B-419B-918A-65357C55151F" },

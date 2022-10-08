@@ -1,6 +1,6 @@
-import {isInformationStatusCode} from "../information-status-code";
-import {isSuccessfulStatusCode} from "../successful-status-code";
-import {StatusCode} from "./status-code";
+import {isInformationStatusCode} from "information-status-code";
+import {StatusCode} from "status-code";
+import {isSuccessfulStatusCode} from "successful-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link StatusCode}. Otherwise, return `false`.

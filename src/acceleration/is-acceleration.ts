@@ -1,5 +1,5 @@
-import {isVector} from "../vector";
-import {Acceleration} from "./acceleration";
+import {Acceleration} from "acceleration";
+import {isVector} from "vector";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Acceleration}. Otherwise, return `false`.

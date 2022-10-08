@@ -1,4 +1,4 @@
-import {INTERNAL_SERVER_ERROR_STATUS_CODE, InternalServerErrorStatusCode} from "./internal-server-error-status-code";
+import {INTERNAL_SERVER_ERROR_STATUS_CODE, InternalServerErrorStatusCode,} from "internal-server-error-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link INTERNAL_SERVER_ERROR_STATUS_CODE}. Otherwise, return `false`.

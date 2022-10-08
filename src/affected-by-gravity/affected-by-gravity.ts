@@ -1,4 +1,4 @@
-import {Kinematic} from "../kinematic";
+import {Kinematic} from "kinematic";
 
 /**
  * A {@link Kinematic} object that is affected by {@link Gravity}.

@@ -1,7 +1,7 @@
 import {
   NON_AUTHORITATIVE_INFORMATION_STATUS_CODE,
   NonAuthoritativeInformationStatusCode,
-} from "./non-authoritative-information-status-code";
+} from "non-authoritative-information-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link NonAuthoritativeInformationStatusCode}. Otherwise, return `false`.

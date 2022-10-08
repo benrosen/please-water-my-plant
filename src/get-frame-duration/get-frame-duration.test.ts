@@ -1,4 +1,4 @@
-import { getFrameDuration } from "./get-frame-duration";
+import { getFrameDuration } from "get-frame-duration";
 
 describe("The getFrameDuration function", () => {
   test.each([

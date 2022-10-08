@@ -1,4 +1,4 @@
-import {OK_STATUS_CODE, OkStatusCode} from "./ok-status-code";
+import {OK_STATUS_CODE, OkStatusCode} from "ok-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link OK_STATUS_CODE}. Otherwise, return `false`.

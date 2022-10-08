@@ -1,3 +1,3 @@
-import { StartsWith } from "../starts-with";
+import { StartsWith } from "starts-with";
 
 export type ResourcePath = StartsWith<"/">;

@@ -1,6 +1,6 @@
-import {Component} from "../component";
-import {ComponentIndex} from "../component-index";
-import {getComponent} from "../get-component";
+import {Component} from "component";
+import {ComponentIndex} from "component-index";
+import {getComponent} from "get-component";
 
 /**
  * Retrieve {@link Component} instances from a {@link ComponentIndex} using a custom index name.

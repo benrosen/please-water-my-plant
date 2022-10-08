@@ -1,5 +1,5 @@
 import {Response} from "express";
-import {StatusCode} from "../status-code";
+import {StatusCode} from "status-code";
 
 /**
  * Send a status code to the client via the given {@link Response}.

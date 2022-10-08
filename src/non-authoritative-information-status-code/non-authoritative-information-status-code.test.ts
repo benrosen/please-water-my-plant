@@ -1,5 +1,7 @@
-import { isNonAuthoritativeInformationStatusCode } from "./is-non-authoritative-information-status-code";
-import { NON_AUTHORITATIVE_INFORMATION_STATUS_CODE } from "./non-authoritative-information-status-code";
+import {
+  isNonAuthoritativeInformationStatusCode,
+  NON_AUTHORITATIVE_INFORMATION_STATUS_CODE,
+} from "non-authoritative-information-status-code";
 
 const validExamples = [NON_AUTHORITATIVE_INFORMATION_STATUS_CODE];
 

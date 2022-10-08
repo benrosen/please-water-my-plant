@@ -1,7 +1,7 @@
-import {accelerate} from "../accelerate";
-import {ComponentIndex} from "../component-index";
-import {getComponentsAffectedByGravity} from "../get-components-affected-by-gravity";
-import {Gravity} from "../gravity";
+import {accelerate} from "accelerate";
+import {ComponentIndex} from "component-index";
+import {getComponentsAffectedByGravity} from "get-components-affected-by-gravity";
+import {Gravity} from "gravity";
 
 /**
  * Apply the force of {@link Gravity} as {@link Acceleration} to all {@link Kinematic} {@link Component} instances that should be {@link AffectedByGravity}.

@@ -1,4 +1,4 @@
-import { isEntityRelated } from "./is-entity-related";
+import { isEntityRelated } from "entity-related";
 
 const validExamples = [
   { entityId: "D65EE2AF-5AF8-47E7-AA40-90365E6DC9FA" },

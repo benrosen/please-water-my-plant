@@ -1,6 +1,6 @@
-import {Component} from "../component";
-import {ComponentIndex} from "../component-index";
-import {Uuid} from "../uuid";
+import {Component} from "component";
+import {ComponentIndex} from "component-index";
+import {Uuid} from "uuid";
 
 /**
  * Retrieve a generic {@link Component} by id from a {@link ComponentIndex}.

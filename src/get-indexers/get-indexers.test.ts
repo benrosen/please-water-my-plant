@@ -1,4 +1,4 @@
-import { getIndexers } from "./get-indexers";
+import { getIndexers } from "get-indexers";
 
 describe("The getIndexers function", () => {
   it("should return an array", () => {

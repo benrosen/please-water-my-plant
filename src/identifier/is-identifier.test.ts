@@ -1,4 +1,4 @@
-import { isIdentifier } from "./is-identifier";
+import { isIdentifier } from "identifier";
 
 const validExamples = [
   "C63B397E-AF40-43C3-81C8-3F14A86EB7EE",

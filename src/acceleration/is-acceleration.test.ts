@@ -1,4 +1,4 @@
-import { isAcceleration } from "./is-acceleration";
+import { isAcceleration } from "acceleration";
 
 const validExamples = [
   { x: 0, y: 0 },

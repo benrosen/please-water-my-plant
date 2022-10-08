@@ -1,4 +1,4 @@
-import {Uuid} from "../uuid";
+import {Uuid} from "uuid";
 
 /**
  * An object that can be used as an identifier.

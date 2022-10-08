@@ -1,5 +1,4 @@
-import { isOkStatusCode } from "./is-ok-status-code";
-import { OK_STATUS_CODE, OkStatusCode } from "./ok-status-code";
+import { isOkStatusCode, OK_STATUS_CODE, OkStatusCode } from "ok-status-code";
 
 const validExamples: OkStatusCode[] = [OK_STATUS_CODE];
 

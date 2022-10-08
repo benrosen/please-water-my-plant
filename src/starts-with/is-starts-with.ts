@@ -1,4 +1,4 @@
-import {StartsWith} from "./starts-with";
+import {StartsWith} from "starts-with";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link StartsWith}. Otherwise, return `false`.

@@ -1,5 +1,7 @@
-import { EARLY_HINTS_STATUS_CODE } from "./early-hints-status-code";
-import { isEarlyHintsStatusCode } from "./is-early-hints-status-code";
+import {
+  EARLY_HINTS_STATUS_CODE,
+  isEarlyHintsStatusCode,
+} from "early-hints-status-code";
 
 const validExamples = [EARLY_HINTS_STATUS_CODE];
 

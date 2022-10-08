@@ -1,4 +1,4 @@
-import { isComponent } from "./is-component";
+import { isComponent } from "component";
 
 const validExamples = [
   {

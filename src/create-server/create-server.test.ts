@@ -1,8 +1,8 @@
+import { Component } from "component";
+import { ComponentsResourcePath } from "components-resource-path";
+import { createServer } from "create-server";
 import * as EventSource from "eventsource";
 import * as createApiTestHarness from "supertest";
-import { Component } from "../component";
-import { ComponentsResourcePath } from "../components-resource-path";
-import { createServer } from "./create-server";
 
 describe("The createServer function", () => {
   describe("should return a server", () => {

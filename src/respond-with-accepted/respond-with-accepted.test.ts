@@ -1,7 +1,7 @@
+import { ACCEPTED_STATUS_CODE } from "accepted-status-code";
 import { Response } from "express";
-import { ACCEPTED_STATUS_CODE } from "../accepted-status-code";
-import { respondWithStatusCode } from "../respond-with-status-code";
-import { respondWithAccepted } from "./respond-with-accepted";
+import { respondWithAccepted } from "respond-with-accepted";
+import { respondWithStatusCode } from "respond-with-status-code";
 
 const mockSend = jest.fn();
 

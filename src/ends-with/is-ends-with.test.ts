@@ -1,4 +1,4 @@
-import { isEndsWith } from "./is-ends-with";
+import { isEndsWith } from "ends-with";
 
 const validExamples: [string, string][] = [
   ["/foo", "/foo"],

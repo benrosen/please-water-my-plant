@@ -1,5 +1,7 @@
-import { isUnauthorizedStatusCode } from "./is-unauthorized-status-code";
-import { UNAUTHORIZED_STATUS_CODE } from "./unauthorized-status-code";
+import {
+  isUnauthorizedStatusCode,
+  UNAUTHORIZED_STATUS_CODE,
+} from "unauthorized-status-code";
 
 const validExamples = [UNAUTHORIZED_STATUS_CODE];
 

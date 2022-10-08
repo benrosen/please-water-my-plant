@@ -1,6 +1,6 @@
-import {isComponent} from "../component";
-import {isUuid} from "../uuid";
-import {ComponentIndex} from "./component-index";
+import {isComponent} from "component";
+import {ComponentIndex} from "component-index";
+import {isUuid} from "uuid";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link ComponentIndex}. Otherwise, return `false`.
@@ -11,7 +11,7 @@ export const isComponentIndex = (value: unknown): value is ComponentIndex => {
     const maybeComponentIndex = value as ComponentIndex;
 
     const hasComponentsIndexedByComponentId = Object.entries(
-        maybeComponentIndex.byComponentId
+      maybeComponentIndex.byComponentId
     ).every(([key, value]) => {
       return isUuid(key) && isComponent(value);
     });
@@ -21,7 +21,7 @@ export const isComponentIndex = (value: unknown): value is ComponentIndex => {
     }
 
     const hasComponentIdsIndexedByEntityId = Object.entries(
-        maybeComponentIndex.byEntityId
+      maybeComponentIndex.byEntityId
     ).every(([key, value]) => {
       return isUuid(key) && Array.isArray(value) && value.every(isUuid);
     });
@@ -31,11 +31,13 @@ export const isComponentIndex = (value: unknown): value is ComponentIndex => {
     }
 
     if (maybeComponentIndex.custom) {
-      return Object.entries(maybeComponentIndex.custom).every(([key, value]) => {
-        return typeof key === "string" && value.every(isUuid);
-      })
+      return Object.entries(maybeComponentIndex.custom).every(
+        ([key, value]) => {
+          return typeof key === "string" && value.every(isUuid);
+        }
+      );
     } else {
-      return true
+      return true;
     }
   } catch {
     return false;

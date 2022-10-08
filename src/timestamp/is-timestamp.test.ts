@@ -1,4 +1,4 @@
-import { isTimestamp } from "./is-timestamp";
+import { isTimestamp } from "timestamp";
 
 describe("The isTimestamp type-guard function", () => {
   describe("should return true", () => {

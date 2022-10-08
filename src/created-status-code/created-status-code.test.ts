@@ -1,5 +1,4 @@
-import { CREATED_STATUS_CODE } from "./created-status-code";
-import { isCreatedStatusCode } from "./is-created-status-code";
+import { CREATED_STATUS_CODE, isCreatedStatusCode } from "created-status-code";
 
 const validExamples = [CREATED_STATUS_CODE];
 

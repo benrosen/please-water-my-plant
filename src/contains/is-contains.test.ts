@@ -1,4 +1,4 @@
-import { isContains } from "./is-contains";
+import { isContains } from "contains";
 
 const validExamples = [
   ["/", "/foo"],

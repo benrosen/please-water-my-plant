@@ -1,4 +1,4 @@
-import { isPosition } from "./is-position";
+import { isPosition } from "position";
 
 const validExamples = [
   { x: 0, y: 0 },

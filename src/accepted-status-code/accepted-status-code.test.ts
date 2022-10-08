@@ -1,5 +1,7 @@
-import { ACCEPTED_STATUS_CODE } from "./accepted-status-code";
-import { isAcceptedStatusCode } from "./is-accepted-status-code";
+import {
+  ACCEPTED_STATUS_CODE,
+  isAcceptedStatusCode,
+} from "accepted-status-code";
 
 const validExamples = [ACCEPTED_STATUS_CODE];
 

@@ -1,5 +1,5 @@
-import {Acceleration} from "../acceleration";
-import {Velocity} from "../velocity";
+import {Acceleration} from "acceleration";
+import {Velocity} from "velocity";
 
 /**
  * Represents a physical object in motion.
