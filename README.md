@@ -11,3 +11,7 @@ _Monster Mashup_ is a two player browser game.
 - __Player One__ kills monsters.
 - __Player Two__ makes monsters.
 
+## Links
+
+- [Play the game](https://monster-mashup.fly.dev/)
+- [Read the technical documentation](https://benrosen.github.io/monster-mashup/)
