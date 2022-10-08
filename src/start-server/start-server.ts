@@ -1,5 +1,7 @@
 import {config} from "../../package.json";
+import {CloseEventName} from "../close-event-name";
 import {createServer} from "../create-server";
+import {ErrorEventName} from "../error-event-name";
 import {getIndexers} from "../get-indexers";
 import {getNewComponents} from "../get-new-components";
 
@@ -20,8 +22,8 @@ export const startServer = (): (() => Promise<void>) => {
 
   return async () => {
     return new Promise((resolve, reject) => {
-      application.on("close", resolve);
-      application.on("error", reject);
+      application.on(CloseEventName, resolve);
+      application.on(ErrorEventName, reject);
 
       application.close();
     });
