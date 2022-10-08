@@ -4,4 +4,5 @@ module.exports = {
   testEnvironment: "node",
   forceExit: true,
   moduleDirectories: ["node_modules", "src"],
+  collectCoverage: true,
 };
