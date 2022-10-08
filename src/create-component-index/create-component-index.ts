@@ -35,6 +35,10 @@ export const createComponentIndex = <GenericComponent extends Component>({
 
       return index;
     },
-    { byComponentId: {}, byEntityId: {}, ...(indexers ? { custom: {} } : {}) }
+    {
+      byComponentId: {},
+      byEntityId: {},
+      ...(indexers?.length ? { custom: {} } : {}),
+    }
   );
 };
