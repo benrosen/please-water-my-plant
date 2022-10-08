@@ -1,5 +1,5 @@
-import {isVector} from "../vector";
-import {Position} from "./position";
+import {Position} from "position";
+import {isVector} from "vector";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Position}. Otherwise, return `false`.
