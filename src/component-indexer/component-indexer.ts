@@ -1,4 +1,4 @@
-import {Component} from "../component";
+import {Component} from "component";
 
 /**
  * A function that accepts a {@link Component} and returns `true` or `false`.

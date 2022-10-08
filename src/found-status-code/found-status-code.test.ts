@@ -1,5 +1,4 @@
-import { FOUND_STATUS_CODE } from "./found-status-code";
-import { isFoundStatusCode } from "./is-found-status-code";
+import { FOUND_STATUS_CODE, isFoundStatusCode } from "found-status-code";
 
 const validExamples = [FOUND_STATUS_CODE];
 

@@ -1,5 +1,7 @@
-import { FORBIDDEN_STATUS_CODE } from "./forbidden-status-code";
-import { isForbiddenStatusCode } from "./is-forbidden-status-code";
+import {
+  FORBIDDEN_STATUS_CODE,
+  isForbiddenStatusCode,
+} from "forbidden-status-code";
 
 const validExamples = [FORBIDDEN_STATUS_CODE];
 

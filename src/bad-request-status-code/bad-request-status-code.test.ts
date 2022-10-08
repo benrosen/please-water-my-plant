@@ -1,5 +1,7 @@
-import { BAD_REQUEST_STATUS_CODE } from "./bad-request-status-code";
-import { isBadRequestStatusCode } from "./is-bad-request-status-code";
+import {
+  BAD_REQUEST_STATUS_CODE,
+  isBadRequestStatusCode,
+} from "bad-request-status-code";
 
 const validExamples = [BAD_REQUEST_STATUS_CODE];
 

@@ -1,12 +1,12 @@
+import {ChangeEventName} from "change-event-name";
+import {Component} from "component";
+import {ComponentIndex} from "component-index";
+import {createApi} from "create-api";
+import {createUpdateComponentsLoop} from "create-update-components-loop";
 import {Express} from "express";
-import {ChangeEventName} from "../change-event-name";
-import {Component} from "../component";
-import {ComponentIndex} from "../component-index";
-import {createApi} from "../create-api";
-import {createUpdateComponentsLoop} from "../create-update-components-loop";
-import {FramesPerSecond} from "../frames-per-second";
-import {Observable} from "../observable";
-import {Order} from "../order";
+import {FramesPerSecond} from "frames-per-second";
+import {Observable} from "observable";
+import {Order} from "order";
 
 /**
  * Create a game server that allows clients to update the game via POST requests, subscribe to game state changes via server-sent events, and visit HTML pages.

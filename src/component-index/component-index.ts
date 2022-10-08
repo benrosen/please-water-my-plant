@@ -1,5 +1,5 @@
-import {Component} from "../component";
-import {Uuid} from "../uuid";
+import {Component} from "component";
+import {Uuid} from "uuid";
 
 /**
  * Provides efficient access to a collection of {@link Component} instances.

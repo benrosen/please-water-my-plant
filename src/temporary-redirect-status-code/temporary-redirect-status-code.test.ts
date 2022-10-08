@@ -1,5 +1,7 @@
-import { isTemporaryRedirectStatusCode } from "./is-temporary-redirect-status-code";
-import { TEMPORARY_REDIRECT_STATUS_CODE } from "./temporary-redirect-status-code";
+import {
+  isTemporaryRedirectStatusCode,
+  TEMPORARY_REDIRECT_STATUS_CODE,
+} from "temporary-redirect-status-code";
 
 const validExamples = [TEMPORARY_REDIRECT_STATUS_CODE];
 

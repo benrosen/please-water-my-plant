@@ -1,11 +1,11 @@
-import { FOUND_STATUS_CODE } from "../found-status-code";
-import { MOVED_PERMANENTLY_STATUS_CODE } from "../moved-permanently-status-code";
-import { MULTIPLE_CHOICE_STATUS_CODE } from "../multiple-choices-status-code";
-import { NOT_MODIFIED_STATUS_CODE } from "../not-modified-status-code";
-import { PERMANENT_REDIRECT_STATUS_CODE } from "../permanent-redirect-status-code";
-import { SEE_OTHER_STATUS_CODE } from "../see-other-status-code";
-import { TEMPORARY_REDIRECT_STATUS_CODE } from "../temporary-redirect-status-code";
-import { isRedirectionStatusCode } from "./is-redirection-status-code";
+import { FOUND_STATUS_CODE } from "found-status-code";
+import { MOVED_PERMANENTLY_STATUS_CODE } from "moved-permanently-status-code";
+import { MULTIPLE_CHOICE_STATUS_CODE } from "multiple-choices-status-code";
+import { NOT_MODIFIED_STATUS_CODE } from "not-modified-status-code";
+import { PERMANENT_REDIRECT_STATUS_CODE } from "permanent-redirect-status-code";
+import { isRedirectionStatusCode } from "redirection-status-code";
+import { SEE_OTHER_STATUS_CODE } from "see-other-status-code";
+import { TEMPORARY_REDIRECT_STATUS_CODE } from "temporary-redirect-status-code";
 
 const validExamples = [
   MULTIPLE_CHOICE_STATUS_CODE,

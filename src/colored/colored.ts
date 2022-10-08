@@ -1,4 +1,4 @@
-import {Color} from "../color";
+import {Color} from "color";
 
 /**
  * An object with a `color` property whose value is a generic {@link Color}.

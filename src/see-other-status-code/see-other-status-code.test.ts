@@ -1,5 +1,7 @@
-import { isSeeOtherStatusCode } from "./is-see-other-status-code";
-import { SEE_OTHER_STATUS_CODE } from "./see-other-status-code";
+import {
+  isSeeOtherStatusCode,
+  SEE_OTHER_STATUS_CODE,
+} from "see-other-status-code";
 
 const validExamples = [SEE_OTHER_STATUS_CODE];
 

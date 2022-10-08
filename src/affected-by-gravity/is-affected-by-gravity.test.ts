@@ -1,4 +1,4 @@
-import { isAffectedByGravity } from "./is-affected-by-gravity";
+import { isAffectedByGravity } from "affected-by-gravity";
 
 const validExamples = [{ affectedByGravity: true }];
 

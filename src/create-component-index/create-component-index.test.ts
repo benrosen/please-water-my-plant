@@ -1,8 +1,8 @@
-import { isAffectedByGravity } from "../affected-by-gravity";
-import { Component } from "../component";
-import { ComponentIndex } from "../component-index";
-import { ComponentIndexer } from "../component-indexer";
-import { createComponentIndex } from "./create-component-index";
+import { isAffectedByGravity } from "affected-by-gravity";
+import { Component } from "component";
+import { ComponentIndex } from "component-index";
+import { ComponentIndexer } from "component-indexer";
+import { createComponentIndex } from "create-component-index";
 
 describe("The createComponentIndex function", () => {
   test.each([

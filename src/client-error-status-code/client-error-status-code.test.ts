@@ -1,8 +1,8 @@
-import { BAD_REQUEST_STATUS_CODE } from "../bad-request-status-code";
-import { FORBIDDEN_STATUS_CODE } from "../forbidden-status-code";
-import { NOT_FOUND_STATUS_CODE } from "../not-found-status-code";
-import { UNAUTHORIZED_STATUS_CODE } from "../unauthorized-status-code";
-import { isClientErrorStatusCode } from "./is-client-error-status-code";
+import { BAD_REQUEST_STATUS_CODE } from "bad-request-status-code";
+import { isClientErrorStatusCode } from "client-error-status-code";
+import { FORBIDDEN_STATUS_CODE } from "forbidden-status-code";
+import { NOT_FOUND_STATUS_CODE } from "not-found-status-code";
+import { UNAUTHORIZED_STATUS_CODE } from "unauthorized-status-code";
 
 const validExamples = [
   BAD_REQUEST_STATUS_CODE,

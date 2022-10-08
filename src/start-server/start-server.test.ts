@@ -1,11 +1,11 @@
+import { ACCEPTED_STATUS_CODE } from "accepted-status-code";
+import { ComponentsResourcePath } from "components-resource-path";
 import * as EventSource from "eventsource";
 import * as http from "http";
+import { Order } from "order";
+import { OrderResourcePath } from "order-resource-path";
+import { startServer } from "start-server";
 import { config } from "../../package.json";
-import { ACCEPTED_STATUS_CODE } from "../accepted-status-code";
-import { ComponentsResourcePath } from "../components-resource-path";
-import { Order } from "../order";
-import { OrderResourcePath } from "../order-resource-path";
-import { startServer } from "./start-server";
 
 const { port } = config;
 

@@ -1,4 +1,4 @@
-import {Integer} from "./integer";
+import {Integer} from "integer";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Integer}. Otherwise, return `false`.

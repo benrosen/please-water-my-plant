@@ -1,5 +1,7 @@
-import { isPermanentRedirectStatusCode } from "./is-permanent-redirect-status-code";
-import { PERMANENT_REDIRECT_STATUS_CODE } from "./permanent-redirect-status-code";
+import {
+  isPermanentRedirectStatusCode,
+  PERMANENT_REDIRECT_STATUS_CODE,
+} from "permanent-redirect-status-code";
 
 const validExamples = [PERMANENT_REDIRECT_STATUS_CODE];
 

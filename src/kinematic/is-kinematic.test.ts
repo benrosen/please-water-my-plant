@@ -1,4 +1,4 @@
-import { isKinematic } from "./is-kinematic";
+import { isKinematic } from "kinematic";
 
 const validExamples = [
   { acceleration: { x: 0, y: 0 }, velocity: { x: 0, y: 0 } },

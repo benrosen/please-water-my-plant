@@ -1,8 +1,8 @@
-import { Colored } from "../colored";
-import { Component } from "../component";
-import { ComponentIndex } from "../component-index";
-import { Name } from "../name";
-import { getComponentsByCustomIndex } from "./get-components-by-custom-index";
+import { Colored } from "colored";
+import { Component } from "component";
+import { ComponentIndex } from "component-index";
+import { getComponentsByCustomIndex } from "get-components-by-custom-index";
+import { Name } from "name";
 
 describe("The getComponentsByCustomIndex function", () => {
   test.each([

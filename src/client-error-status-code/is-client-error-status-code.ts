@@ -1,8 +1,8 @@
-import {isBadRequestStatusCode} from "../bad-request-status-code";
-import {isForbiddenStatusCode} from "../forbidden-status-code";
-import {isNotFoundStatusCode} from "../not-found-status-code";
-import {isUnauthorizedStatusCode} from "../unauthorized-status-code";
-import {ClientErrorStatusCode} from "./client-error-status-code";
+import {isBadRequestStatusCode} from "bad-request-status-code";
+import {ClientErrorStatusCode} from "client-error-status-code";
+import {isForbiddenStatusCode} from "forbidden-status-code";
+import {isNotFoundStatusCode} from "not-found-status-code";
+import {isUnauthorizedStatusCode} from "unauthorized-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link ClientErrorStatusCode}. Otherwise, return `false`.

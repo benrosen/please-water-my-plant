@@ -1,6 +1,5 @@
+import { fixFloat } from "fix-float";
 import { config } from "../../package.json";
-
-import { fixFloat } from "./fix-float";
 
 describe("The fixFloat function", () => {
   test.each([0, 1.0, 1.000009] as number[])(

@@ -1,5 +1,5 @@
-import {fixFloat} from "../fix-float";
-import {Vector} from "../vector";
+import {fixFloat} from "fix-float";
+import {Vector} from "vector";
 
 /**
  * Convert a {@link Vector} instance's floating-point values to fixed-point values.

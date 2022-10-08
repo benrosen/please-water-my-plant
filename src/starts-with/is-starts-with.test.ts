@@ -1,4 +1,4 @@
-import { isStartsWith } from "./is-starts-with";
+import { isStartsWith } from "starts-with";
 
 const validExamples: [string, string][] = [
   ["/", "/foo"],

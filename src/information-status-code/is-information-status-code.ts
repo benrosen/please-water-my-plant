@@ -1,8 +1,8 @@
-import {isContinueStatusCode} from "../continue-status-code";
-import {isEarlyHintsStatusCode} from "../early-hints-status-code";
-import {isProcessingStatusCode} from "../processing-status-code";
-import {isSwitchingProtocolsStatusCode} from "../switching-protocols-status-code";
-import {InformationStatusCode} from "./information-status-code";
+import {isContinueStatusCode} from "continue-status-code";
+import {isEarlyHintsStatusCode} from "early-hints-status-code";
+import {InformationStatusCode} from "information-status-code";
+import {isProcessingStatusCode} from "processing-status-code";
+import {isSwitchingProtocolsStatusCode} from "switching-protocols-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link InformationStatusCode}. Otherwise, return `false`.

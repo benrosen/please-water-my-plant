@@ -1,4 +1,4 @@
-import { isPositiveNumber } from "./is-positive-number";
+import { isPositiveNumber } from "positive-number";
 
 const validExamples = [1, 23.4, 98];
 

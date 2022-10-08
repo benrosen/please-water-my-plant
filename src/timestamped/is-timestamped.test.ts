@@ -1,4 +1,4 @@
-import { isTimestamped } from "./is-timestamped";
+import { isTimestamped } from "timestamped";
 
 const validExamples = [{ timestamp: 0 }];
 

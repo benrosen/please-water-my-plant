@@ -1,5 +1,5 @@
 import {Request} from "express";
-import {isOrder, Order} from "../order";
+import {isOrder, Order} from "order";
 
 /**
  * Parse an {@link Order} instance from an incoming request.

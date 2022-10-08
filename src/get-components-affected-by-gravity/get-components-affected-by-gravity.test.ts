@@ -1,7 +1,7 @@
-import { AffectedByGravity } from "../affected-by-gravity";
-import { Component } from "../component";
-import { ComponentIndex } from "../component-index";
-import { getComponentsAffectedByGravity } from "./get-components-affected-by-gravity";
+import { AffectedByGravity } from "affected-by-gravity";
+import { Component } from "component";
+import { ComponentIndex } from "component-index";
+import { getComponentsAffectedByGravity } from "get-components-affected-by-gravity";
 
 describe("The getComponentsAffectedByGravity function", () => {
   test.each([

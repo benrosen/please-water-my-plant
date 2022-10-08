@@ -1,9 +1,9 @@
-import { Acceleration } from "../acceleration";
-import { Component } from "../component";
-import { ComponentIndex } from "../component-index";
-import { Kinematic } from "../kinematic";
-import { Uuid } from "../uuid";
-import { accelerate } from "./accelerate";
+import { accelerate } from "accelerate";
+import { Acceleration } from "acceleration";
+import { Component } from "component";
+import { ComponentIndex } from "component-index";
+import { Kinematic } from "kinematic";
+import { Uuid } from "uuid";
 
 describe("The accelerate function", () => {
   test.each([

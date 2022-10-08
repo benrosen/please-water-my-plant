@@ -1,5 +1,7 @@
-import { CONTINUE_STATUS_CODE } from "./continue-status-code";
-import { isContinueStatusCode } from "./is-continue-status-code";
+import {
+  CONTINUE_STATUS_CODE,
+  isContinueStatusCode,
+} from "continue-status-code";
 
 const validExamples = [CONTINUE_STATUS_CODE];
 

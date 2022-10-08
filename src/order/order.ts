@@ -1,5 +1,5 @@
-import {Component} from "../component";
-import {Timestamped} from "../timestamped";
+import {Component} from "component";
+import {Timestamped} from "timestamped";
 
 /**
  * An {@link Order} is a {@link Timestamped} {@link Component}.

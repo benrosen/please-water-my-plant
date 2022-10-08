@@ -1,8 +1,8 @@
-import { CONTINUE_STATUS_CODE } from "../continue-status-code";
-import { EARLY_HINTS_STATUS_CODE } from "../early-hints-status-code";
-import { PROCESSING_STATUS_CODE } from "../processing-status-code/processing-status-code";
-import { SWITCHING_PROTOCOLS_STATUS_CODE } from "../switching-protocols-status-code";
-import { isInformationStatusCode } from "./is-information-status-code";
+import { CONTINUE_STATUS_CODE } from "continue-status-code";
+import { EARLY_HINTS_STATUS_CODE } from "early-hints-status-code";
+import { isInformationStatusCode } from "information-status-code";
+import { PROCESSING_STATUS_CODE } from "processing-status-code/processing-status-code";
+import { SWITCHING_PROTOCOLS_STATUS_CODE } from "switching-protocols-status-code";
 
 const validExamples = [
   CONTINUE_STATUS_CODE,

@@ -1,7 +1,7 @@
+import { BadRequestErrorStatusCode } from "bad-request-error-status-code";
 import { Response } from "express";
-import { BadRequestErrorStatusCode } from "../bad-request-error-status-code";
-import { respondWithStatusCode } from "../respond-with-status-code";
-import { respondWithBadRequestError } from "./respond-with-bad-request-error";
+import { respondWithBadRequestError } from "respond-with-bad-request-error";
+import { respondWithStatusCode } from "respond-with-status-code";
 
 const mockSend = jest.fn();
 

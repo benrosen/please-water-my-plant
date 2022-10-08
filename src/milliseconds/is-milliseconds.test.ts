@@ -1,4 +1,4 @@
-import { isMilliseconds } from "./is-milliseconds";
+import { isMilliseconds } from "milliseconds";
 
 const validExamples = [0, 1, 12];
 

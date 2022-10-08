@@ -1,4 +1,4 @@
-import { isFramesPerSecond } from "./is-frames-per-second";
+import { isFramesPerSecond } from "frames-per-second";
 
 const validExamples = [1, 2, 12, 24, 30, 60, 120];
 

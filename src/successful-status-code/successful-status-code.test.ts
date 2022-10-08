@@ -1,11 +1,11 @@
-import { ACCEPTED_STATUS_CODE } from "../accepted-status-code";
-import { CREATED_STATUS_CODE } from "../created-status-code";
-import { NO_CONTENT_STATUS_CODE } from "../no-content-status-code/no-content-status-code";
-import { NON_AUTHORITATIVE_INFORMATION_STATUS_CODE } from "../non-authoritative-information-status-code";
-import { OK_STATUS_CODE } from "../ok-status-code";
-import { PARTIAL_CONTENT_STATUS_CODE } from "../partial-content-status-code";
-import { RESET_CONTENT_STATUS_CODE } from "../reset-content-status-code";
-import { isSuccessfulStatusCode } from "./is-successful-status-code";
+import { ACCEPTED_STATUS_CODE } from "accepted-status-code";
+import { CREATED_STATUS_CODE } from "created-status-code";
+import { NO_CONTENT_STATUS_CODE } from "no-content-status-code";
+import { NON_AUTHORITATIVE_INFORMATION_STATUS_CODE } from "non-authoritative-information-status-code";
+import { OK_STATUS_CODE } from "ok-status-code";
+import { PARTIAL_CONTENT_STATUS_CODE } from "partial-content-status-code";
+import { RESET_CONTENT_STATUS_CODE } from "reset-content-status-code";
+import { isSuccessfulStatusCode } from "successful-status-code";
 
 const validExamples = [
   OK_STATUS_CODE,

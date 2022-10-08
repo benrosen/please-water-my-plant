@@ -1,8 +1,8 @@
-import {ClientErrorStatusCode} from "../client-error-status-code";
-import {InformationStatusCode} from "../information-status-code";
-import {RedirectionStatusCode} from "../redirection-status-code";
-import {ServerErrorStatusCode} from "../server-error-status-code";
-import {SuccessfulStatusCode} from "../successful-status-code";
+import {ClientErrorStatusCode} from "client-error-status-code";
+import {InformationStatusCode} from "information-status-code";
+import {RedirectionStatusCode} from "redirection-status-code";
+import {ServerErrorStatusCode} from "server-error-status-code";
+import {SuccessfulStatusCode} from "successful-status-code";
 
 /**
  * Indicate whether a specific HTTP request has been successfully completed.

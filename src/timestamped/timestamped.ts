@@ -1,4 +1,4 @@
-import {Timestamp} from "../timestamp";
+import {Timestamp} from "timestamp";
 
 /**
  * An object with a `timestamp` property whose value is a {@link Timestamp}.

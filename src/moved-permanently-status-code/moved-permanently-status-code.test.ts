@@ -1,5 +1,7 @@
-import { isMovedPermanentlyStatusCode } from "./is-moved-permanently-status-code";
-import { MOVED_PERMANENTLY_STATUS_CODE } from "./moved-permanently-status-code";
+import {
+  isMovedPermanentlyStatusCode,
+  MOVED_PERMANENTLY_STATUS_CODE,
+} from "moved-permanently-status-code";
 
 const validExamples = [MOVED_PERMANENTLY_STATUS_CODE];
 

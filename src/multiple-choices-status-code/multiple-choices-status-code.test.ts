@@ -1,5 +1,7 @@
-import { isMultipleChoicesStatusCode } from "./is-multiple-choices-status-code";
-import { MULTIPLE_CHOICE_STATUS_CODE } from "./multiple-choices-status-code";
+import {
+  isMultipleChoicesStatusCode,
+  MULTIPLE_CHOICE_STATUS_CODE,
+} from "multiple-choices-status-code";
 
 const validExamples = [MULTIPLE_CHOICE_STATUS_CODE];
 

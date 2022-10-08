@@ -1,4 +1,4 @@
-import {SEE_OTHER_STATUS_CODE, SeeOtherStatusCode} from "./see-other-status-code";
+import {SEE_OTHER_STATUS_CODE, SeeOtherStatusCode} from "see-other-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link SeeOtherStatusCode}. Otherwise, return `false`.

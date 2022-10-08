@@ -1,6 +1,6 @@
+import {BadRequestErrorStatusCode} from "bad-request-error-status-code";
 import {Response} from "express";
-import {BadRequestErrorStatusCode} from "../bad-request-error-status-code";
-import {respondWithStatusCode} from "../respond-with-status-code";
+import {respondWithStatusCode} from "respond-with-status-code";
 
 /**
  * Send a {@link BadRequestErrorStatusCode} to the client via the given {@link Response}.

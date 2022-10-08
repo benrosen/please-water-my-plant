@@ -1,5 +1,5 @@
-import { updateComponents } from "../update-components";
-import { createUpdateComponentsLoop } from "./create-update-components-loop";
+import { createUpdateComponentsLoop } from "create-update-components-loop";
+import { updateComponents } from "update-components";
 
 jest.mock("../update-components", () => {
   return {

@@ -1,5 +1,5 @@
-import {Integer} from "../integer";
-import {Milliseconds} from "../milliseconds";
+import {Integer} from "integer";
+import {Milliseconds} from "milliseconds";
 
 /**
  * The reconnection time.

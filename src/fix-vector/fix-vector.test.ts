@@ -1,5 +1,5 @@
-import { Vector } from "../vector";
-import { fixVector } from "./fix-vector";
+import { fixVector } from "fix-vector";
+import { Vector } from "vector";
 
 describe("The fixVector function", () => {
   test.each([

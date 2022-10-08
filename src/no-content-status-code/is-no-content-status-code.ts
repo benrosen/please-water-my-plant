@@ -1,4 +1,4 @@
-import {NO_CONTENT_STATUS_CODE, NoContentStatusCode,} from "./no-content-status-code";
+import {NO_CONTENT_STATUS_CODE, NoContentStatusCode,} from "no-content-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link NoContentStatusCode}. Otherwise, return `false`.

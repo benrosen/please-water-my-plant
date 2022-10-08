@@ -1,4 +1,4 @@
-import { parseOrderFromRequest } from "./parse-order-from-request";
+import { parseOrderFromRequest } from "parse-order-from-request";
 
 describe("The parseOrderFromRequest function", () => {
   test.each([

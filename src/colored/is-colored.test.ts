@@ -1,4 +1,4 @@
-import { isColored } from "./is-colored";
+import { isColored } from "colored";
 
 const validExamples = [{ color: "foo" }];
 

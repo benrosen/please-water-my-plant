@@ -1,5 +1,5 @@
-import { ChangeEventName } from "../change-event-name";
-import { Observable } from "./observable";
+import { ChangeEventName } from "change-event-name";
+import { Observable } from "observable";
 
 describe("The generic Observable class", () => {
   describe("should return the expected value", () => {

@@ -1,5 +1,7 @@
-import { isNotModifiedStatusCode } from "./is-not-modified-status-code";
-import { NOT_MODIFIED_STATUS_CODE } from "./not-modified-status-code";
+import {
+  isNotModifiedStatusCode,
+  NOT_MODIFIED_STATUS_CODE,
+} from "not-modified-status-code";
 
 const validExamples = [NOT_MODIFIED_STATUS_CODE];
 

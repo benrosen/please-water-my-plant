@@ -1,4 +1,4 @@
-import {UNAUTHORIZED_STATUS_CODE, UnauthorizedStatusCode,} from "./unauthorized-status-code";
+import {UNAUTHORIZED_STATUS_CODE, UnauthorizedStatusCode,} from "unauthorized-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link UnauthorizedStatusCode}. Otherwise, return `false`.

@@ -1,5 +1,7 @@
-import { isPartialContentStatusCode } from "./is-partial-content-status-code";
-import { PARTIAL_CONTENT_STATUS_CODE } from "./partial-content-status-code";
+import {
+  isPartialContentStatusCode,
+  PARTIAL_CONTENT_STATUS_CODE,
+} from "partial-content-status-code";
 
 const validExamples = [PARTIAL_CONTENT_STATUS_CODE];
 

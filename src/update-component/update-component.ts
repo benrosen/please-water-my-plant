@@ -1,5 +1,5 @@
-import {Component} from "../component";
-import {ComponentIndex} from "../component-index";
+import {Component} from "component";
+import {ComponentIndex} from "component-index";
 
 /**
  * Update the value of a {@link Component} in a {@link ComponentIndex}

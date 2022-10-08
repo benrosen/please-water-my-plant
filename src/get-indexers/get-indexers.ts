@@ -1,4 +1,4 @@
-import {ComponentIndexer} from "../component-indexer";
+import {ComponentIndexer} from "component-indexer";
 
 /**
  * Return an array of {@link ComponentIndexer} functions.

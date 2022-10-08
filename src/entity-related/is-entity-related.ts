@@ -1,5 +1,5 @@
-import {isUuid} from "../uuid";
-import {EntityRelated} from "./entity-related";
+import {EntityRelated} from "entity-related";
+import {isUuid} from "uuid";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link EntityRelated}. Otherwise, return `false`.

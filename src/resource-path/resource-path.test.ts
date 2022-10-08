@@ -1,4 +1,4 @@
-import { isResourcePath } from "./is-resource-path";
+import { isResourcePath } from "resource-path";
 
 const validExamples = ["/foo", "/bar", "/baz"];
 

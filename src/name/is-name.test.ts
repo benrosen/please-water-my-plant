@@ -1,4 +1,4 @@
-import { isName } from "./is-name";
+import { isName } from "name";
 
 const validExamples = ["my name", "nombre"];
 

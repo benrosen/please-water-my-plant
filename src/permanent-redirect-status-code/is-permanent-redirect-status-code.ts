@@ -1,4 +1,4 @@
-import {PERMANENT_REDIRECT_STATUS_CODE, PermanentRedirectStatusCode} from "./permanent-redirect-status-code";
+import {PERMANENT_REDIRECT_STATUS_CODE, PermanentRedirectStatusCode,} from "permanent-redirect-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link PermanentRedirectStatusCode}. Otherwise, return `false`.

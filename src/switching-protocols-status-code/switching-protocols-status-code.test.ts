@@ -1,8 +1,8 @@
-import { isSwitchingProtocolsStatusCode } from "./is-switching-protocols-status-code";
 import {
+  isSwitchingProtocolsStatusCode,
   SWITCHING_PROTOCOLS_STATUS_CODE,
   SwitchingProtocolsStatusCode,
-} from "./switching-protocols-status-code";
+} from "switching-protocols-status-code";
 
 const validExamples: SwitchingProtocolsStatusCode[] = [
   SWITCHING_PROTOCOLS_STATUS_CODE,

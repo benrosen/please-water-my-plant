@@ -1,6 +1,6 @@
-import {isInteger} from "../integer";
-import {isPositiveNumber} from "../positive-number";
-import {FramesPerSecond} from "./frames-per-second";
+import {FramesPerSecond} from "frames-per-second";
+import {isInteger} from "integer";
+import {isPositiveNumber} from "positive-number";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link FramesPerSecond}. Otherwise, return `false`.

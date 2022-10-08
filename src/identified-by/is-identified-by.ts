@@ -1,5 +1,5 @@
-import {Identifier, isIdentifier} from "../identifier";
-import {IdentifiedBy} from "./identified-by";
+import {IdentifiedBy} from "identified-by";
+import {Identifier, isIdentifier} from "identifier";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link IdentifiedBy}. Otherwise, return `false`.

@@ -1,11 +1,11 @@
-import {Acceleration} from "../acceleration";
-import {Component} from "../component";
-import {ComponentIndex} from "../component-index";
-import {fixVector} from "../fix-vector";
-import {getComponent} from "../get-component";
-import {Kinematic} from "../kinematic";
-import {updateComponent} from "../update-component";
-import {Uuid} from "../uuid";
+import {Acceleration} from "acceleration";
+import {Component} from "component";
+import {ComponentIndex} from "component-index";
+import {fixVector} from "fix-vector";
+import {getComponent} from "get-component";
+import {Kinematic} from "kinematic";
+import {updateComponent} from "update-component";
+import {Uuid} from "uuid";
 
 /**
  * Update the {@link Velocity} of the specified {@link Component} instances by the given {@link Acceleration}.

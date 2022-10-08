@@ -1,4 +1,4 @@
-import {ACCEPTED_STATUS_CODE, AcceptedStatusCode} from "./accepted-status-code";
+import {ACCEPTED_STATUS_CODE, AcceptedStatusCode} from "accepted-status-code";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link ACCEPTED_STATUS_CODE}. Otherwise, return `false`.

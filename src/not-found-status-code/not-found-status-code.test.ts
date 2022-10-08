@@ -1,5 +1,7 @@
-import { isNotFoundStatusCode } from "./is-not-found-status-code";
-import { NOT_FOUND_STATUS_CODE } from "./not-found-status-code";
+import {
+  isNotFoundStatusCode,
+  NOT_FOUND_STATUS_CODE,
+} from "not-found-status-code";
 
 const validExamples = [NOT_FOUND_STATUS_CODE];
 

@@ -1,4 +1,4 @@
-import { getComponent } from "./get-component";
+import { getComponent } from "get-component";
 
 describe("The getComponent function", () => {
   test.each([
