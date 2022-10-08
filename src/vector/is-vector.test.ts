@@ -1,6 +1,6 @@
-import { isVector } from "../vector";
+import { isVector, Vector } from "vector";
 
-const validExamples = [
+const validExamples: Vector[] = [
   { x: 0, y: 0 },
   { x: 0, y: -1 },
   { x: -1, y: 0 },
@@ -8,7 +8,7 @@ const validExamples = [
   { x: 0.090087, y: 1.324 },
 ];
 
-const invalidExamples = [
+const invalidExamples: unknown[] = [
   { entity: "foo" },
   { id: "bar" },
   { x: 0, y: false },

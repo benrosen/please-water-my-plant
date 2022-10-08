@@ -1,4 +1,4 @@
-import {Vector} from "./vector";
+import {Vector} from "vector";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Vector}. Otherwise, return `false`.
