@@ -1,6 +1,6 @@
-import {Component} from "../component";
-import {ComponentIndex} from "../component-index";
-import {createComponentIndex} from "../create-component-index";
+import {Component} from "component";
+import {ComponentIndex} from "component-index";
+import {createComponentIndex} from "create-component-index";
 
 /**
  * Update an array of {@link Component} instances representing the state of the game.

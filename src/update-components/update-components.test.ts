@@ -1,5 +1,5 @@
-import { Component } from "../component";
-import { updateComponents } from "./update-components";
+import { Component } from "component";
+import { updateComponents } from "update-components";
 
 describe("The updateComponents function", () => {
   it("should call setComponents with an array of components", function () {
