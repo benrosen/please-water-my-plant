@@ -16,6 +16,7 @@ import {respondWithInternalServerError} from "respond-with-internal-server-error
 import {ServerSentEventHeaders} from "server-sent-event-headers";
 import {AntagonistPage} from "../antagonist-page";
 import {AntagonistPagePath} from "../antagonist-page-path";
+import {NotFoundPage} from "../not-found-page";
 import {ProtagonistPage} from "../protagonist-page";
 import {ProtagonistPagePath} from "../protagonist-page-path";
 
@@ -81,6 +82,24 @@ export const createApi = ({
     } catch {
       return respondWithInternalServerError({ response });
     }
+  });
+
+  server.use((req, res) => {
+    res.status(404);
+
+    if (req.accepts("html")) {
+      res.send(NotFoundPage);
+
+      return;
+    }
+
+    if (req.accepts("json")) {
+      res.json({ error: "Not found" });
+
+      return;
+    }
+
+    res.type("txt").send("Not found");
   });
 
   return server;
