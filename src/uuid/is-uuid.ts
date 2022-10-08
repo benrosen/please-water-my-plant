@@ -1,4 +1,4 @@
-import {Uuid} from "./uuid";
+import {Uuid} from "uuid";
 
 /**
  * Return `true` if the given value (of `unknown` type) is of type {@link Uuid}. Otherwise, return `false`.
