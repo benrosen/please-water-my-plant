@@ -1,4 +1,4 @@
-import { OnChangeEventName } from "../on-change-event-name";
+import { ChangeEventName } from "../change-event-name";
 import { Observable } from "./observable";
 
 describe("The generic Observable class", () => {
@@ -58,7 +58,7 @@ describe("The generic Observable class", () => {
         (initialValue, nextValue) => {
           const observable = new Observable(initialValue);
 
-          observable.on(OnChangeEventName, (event) => {
+          observable.on(ChangeEventName, (event) => {
             expect(event).toStrictEqual(nextValue);
           });
 

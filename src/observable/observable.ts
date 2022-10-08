@@ -1,12 +1,12 @@
 import {EventEmitter} from "events";
-import {OnChangeEventName} from "../on-change-event-name";
+import {ChangeEventName} from "../change-event-name";
 
 /**
- * An object that emits an `onChange` event whenever its value changes.
+ * An object that emits a `change` event whenever its value changes.
  */
 export class Observable<GenericType> extends EventEmitter {
   /**
-   * Create an object that emits an `onChange` event whenever its value changes.
+   * Create an object that emits a `change` event whenever its value changes.
    * @param initialValue The initial value.
    */
   constructor(initialValue: GenericType) {
@@ -22,6 +22,6 @@ export class Observable<GenericType> extends EventEmitter {
   }
 
   public set value(value: GenericType) {
-    this.emit(OnChangeEventName, (this._value = value));
+    this.emit(ChangeEventName, (this._value = value));
   }
 }
