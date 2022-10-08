@@ -6,6 +6,6 @@ export const NotFoundPage = `<!DOCTYPE html>
 </head>
 <body>
 <h1>Not Found</h1>
-<p>Hello world!</p>
+<a href="/">Home</a>
 </body>
 </html>`;
