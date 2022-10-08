@@ -14,6 +14,10 @@ import {respondWithAccepted} from "respond-with-accepted";
 import {respondWithBadRequestError} from "respond-with-bad-request-error";
 import {respondWithInternalServerError} from "respond-with-internal-server-error";
 import {ServerSentEventHeaders} from "server-sent-event-headers";
+import {AntagonistPage} from "../antagonist-page";
+import {AntagonistPagePath} from "../antagonist-page-path";
+import {ProtagonistPage} from "../protagonist-page";
+import {ProtagonistPagePath} from "../protagonist-page-path";
 
 /**
  * Create an API for posting {@link Order} objects, getting {@link Component} updates, and serving HTML pages.
@@ -40,6 +44,14 @@ export const createApi = ({
 
   server.get(HomePagePath, (request, response) => {
     response.send(HomePage);
+  });
+
+  server.get(AntagonistPagePath, (request, response) => {
+    response.send(AntagonistPage);
+  });
+
+  server.get(ProtagonistPagePath, (request, response) => {
+    response.send(ProtagonistPage);
   });
 
   server.get(ComponentsResourcePath, (request, response) => {
