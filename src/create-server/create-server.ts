@@ -1,11 +1,11 @@
 import {Express} from "express";
+import {ChangeEventName} from "../change-event-name";
 import {Component} from "../component";
 import {ComponentIndex} from "../component-index";
 import {createApi} from "../create-api";
 import {createUpdateComponentsLoop} from "../create-update-components-loop";
 import {FramesPerSecond} from "../frames-per-second";
 import {Observable} from "../observable";
-import {OnChangeEventName} from "../on-change-event-name";
 import {Order} from "../order";
 
 /**
@@ -33,10 +33,10 @@ export const createServer = ({
     registerOnComponentsChangedHandler: (
       handleOnComponentsChanged: (components: Component[]) => void
     ) => {
-      components.on(OnChangeEventName, handleOnComponentsChanged);
+      components.on(ChangeEventName, handleOnComponentsChanged);
 
       return () => {
-        components.off(OnChangeEventName, handleOnComponentsChanged);
+        components.off(ChangeEventName, handleOnComponentsChanged);
       };
     },
   });
