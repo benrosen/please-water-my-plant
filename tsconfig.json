@@ -13,5 +13,11 @@
     "require": [
       "tsconfig-paths/register"
     ]
-  }
+  },
+  "typeRoots": [
+    "./node_modules/phaser/types"
+  ],
+  "types": [
+    "Phaser"
+  ]
 }
