@@ -40,19 +40,11 @@ export const createApi = ({
 
   server.use(cors());
 
-  server.use(express.static(path.join(__dirname, "antagonist-page")));
+  server.use(HomePagePath, express.static("src/home-page"));
 
-  server.get(HomePagePath, (request, response) => {
-    response.sendFile(path.join(__dirname, "../home-page/index.html"));
-  });
+  server.use(AntagonistPagePath, express.static("src/antagonist-page"));
 
-  server.get(AntagonistPagePath, (request, response) => {
-    response.sendFile(path.join(__dirname, "../antagonist-page/index.html"));
-  });
-
-  server.get(ProtagonistPagePath, (request, response) => {
-    response.sendFile(path.join(__dirname, "../protagonist-page/index.html"));
-  });
+  server.use(ProtagonistPagePath, express.static("src/protagonist-page"));
 
   server.get(ComponentsResourcePath, (request, response) => {
     response.writeHead(OK_STATUS_CODE, ServerSentEventHeaders);
