@@ -1,6 +1,6 @@
-import { AffectedByGravity } from "../affected-by-gravity";
-import { Component } from "../component";
-import { ComponentIndex } from "../component-index";
+import { AffectedByGravity } from "affected-by-gravity";
+import { Component } from "component";
+import { ComponentIndex } from "component-index";
 import { affectComponentsByGravity } from "./affect-components-by-gravity";
 
 describe("The affectComponentsByGravity function", () => {
