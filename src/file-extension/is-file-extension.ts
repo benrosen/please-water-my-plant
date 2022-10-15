@@ -1,5 +1,5 @@
-import {isJavascriptFileExtension} from "../javascript-file-extension";
-import {isTypescriptFileExtension} from "../typescript-file-extension";
+import {isJavascriptFileExtension} from "javascript-file-extension";
+import {isTypescriptFileExtension} from "typescript-file-extension";
 import {FileExtension} from "./file-extension";
 
 /**
