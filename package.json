@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "document": "typedoc",
+    "prestart": "ts-node -e 'require(\"./src/create-browser-scripts\").createBrowserScripts()'",
     "start": "ts-node -e 'require(\"./src/start-server\").startServer()'",
     "test": "jest"
   },
