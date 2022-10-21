@@ -1,21 +1,21 @@
-import * as bodyParser from "body-parser";
+import {AntagonistPagePath} from "antagonist-page-path";
+import bodyParser from "body-parser";
 import {CloseEventName} from "close-event-name";
 import {Component} from "component";
 import {ComponentsResourcePath} from "components-resource-path";
-import * as cors from "cors";
-import * as express from "express";
+import cors from "cors";
+import express from "express";
 import {HomePagePath} from "home-page-path";
 import {OK_STATUS_CODE} from "ok-status-code";
 import {Order} from "order";
 import {OrderResourcePath} from "order-resource-path";
 import {parseOrderFromRequest} from "parse-order-from-request";
 import * as path from "path";
+import {ProtagonistPagePath} from "protagonist-page-path";
 import {respondWithAccepted} from "respond-with-accepted";
 import {respondWithBadRequestError} from "respond-with-bad-request-error";
 import {respondWithInternalServerError} from "respond-with-internal-server-error";
 import {ServerSentEventHeaders} from "server-sent-event-headers";
-import {AntagonistPagePath} from "../antagonist-page-path";
-import {ProtagonistPagePath} from "../protagonist-page-path";
 
 /**
  * Create an API for posting {@link Order} objects, getting {@link Component} updates, and serving HTML pages.

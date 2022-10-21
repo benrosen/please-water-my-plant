@@ -1,8 +1,8 @@
 import {Component} from "component";
-import * as EventSource from "eventsource";
+import {ComponentsResourcePath} from "components-resource-path";
+import EventSource from "eventsource";
 import {Order} from "order";
-import {ComponentsResourcePath} from "../components-resource-path";
-import {OrderResourcePath} from "../order-resource-path";
+import {OrderResourcePath} from "order-resource-path";
 
 /**
  * Invoke a callback function when {@link Component} messages are received from the server.
