@@ -8,7 +8,6 @@ export const createBrowserScripts = async () => {
     bundle: true,
     minify: true,
     sourcemap: true,
-    platform: "node",
     target: ["chrome58", "firefox57", "safari11", "edge18"],
   };
 
