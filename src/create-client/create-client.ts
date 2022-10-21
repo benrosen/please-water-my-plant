@@ -1,6 +1,5 @@
 import {Component} from "component";
 import {ComponentsResourcePath} from "components-resource-path";
-import EventSource from "eventsource";
 import {Order} from "order";
 import {OrderResourcePath} from "order-resource-path";
 
