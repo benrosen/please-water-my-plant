@@ -1,8 +1,13 @@
 /** @jest-environment jsdom */
 
+import EventSource from "eventsource";
 import { OrderResourcePath } from "order-resource-path";
 import { createClient } from "./create-client";
 import resetAllMocks = jest.resetAllMocks;
+
+const defaultEventSource = window.EventSource;
+
+window.EventSource = EventSource;
 
 const defaultFetch: typeof fetch = window.fetch;
 
@@ -15,6 +20,8 @@ beforeEach(() => {
 });
 
 afterAll(() => {
+  window.EventSource = defaultEventSource;
+
   window.fetch = defaultFetch;
 });
 
