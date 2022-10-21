@@ -1,8 +1,8 @@
 /** @jest-environment jsdom */
 
-import { createAntagonistController } from "../create-antagonist-controller";
-import { createConsole } from "../create-console";
-import { createUuid } from "../uuid";
+import { createAntagonistController } from "create-antagonist-controller";
+import { createConsole } from "create-console";
+import { createUuid } from "uuid";
 import { createAntagonistConsole } from "./create-antagonist-console";
 
 jest.mock("create-console");

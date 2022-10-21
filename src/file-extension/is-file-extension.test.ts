@@ -1,5 +1,5 @@
-import { JAVASCRIPT_FILE_EXTENSION } from "../javascript-file-extension";
-import { TYPESCRIPT_FILE_EXTENSION } from "../typescript-file-extension";
+import { JAVASCRIPT_FILE_EXTENSION } from "javascript-file-extension";
+import { TYPESCRIPT_FILE_EXTENSION } from "typescript-file-extension";
 import { isFileExtension } from "./is-file-extension";
 
 const validExamples = [JAVASCRIPT_FILE_EXTENSION, TYPESCRIPT_FILE_EXTENSION];
