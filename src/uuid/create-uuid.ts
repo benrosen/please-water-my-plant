@@ -1,6 +1,6 @@
-import { randomUUID } from "crypto";
+import { v4 } from "uuid-alias";
 import { Uuid } from "./uuid";
 
 export const createUuid = (): Uuid => {
-  return randomUUID() as Uuid;
+  return v4() as Uuid;
 };
