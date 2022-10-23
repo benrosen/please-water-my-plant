@@ -1,3 +1,4 @@
+import {ANTAGONIST} from "antagonist";
 import {createAntagonistController} from "create-antagonist-controller";
 import {createConsole} from "create-console";
 import {IdentifiedByUuid} from "identified-by-uuid";
@@ -11,5 +12,6 @@ export const createAntagonistConsole = ({ id }: IdentifiedByUuid) => {
   createConsole({
     createController: createAntagonistController,
     id,
+    role: ANTAGONIST,
   });
 };
