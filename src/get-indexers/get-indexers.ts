@@ -1,15 +1,9 @@
 import {ComponentIndexer} from "component-indexer";
+import {isOrder} from "order";
 
 /**
  * Return an array of {@link ComponentIndexer} functions.
  */
 export const getIndexers = (): ComponentIndexer[] => {
-  return [
-    // isAffectedByGravity,
-    // isCollidesWithHero,
-    // isCollidesWithMob,
-    // isCollidesWithPlatform,
-    // isCollidesWithPowerup,
-    // isKinematic,
-  ];
+  return [isOrder];
 };
