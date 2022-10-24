@@ -1,4 +1,4 @@
-import {isName, Name} from "../name";
+import {isName, Name} from "name";
 import {Named} from "./named";
 
 /**
