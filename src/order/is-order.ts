@@ -1,4 +1,5 @@
 import {isComponent} from "component";
+import {isNamed} from "named";
 import {Order} from "order";
 import {isTimestamped} from "timestamped";
 
@@ -7,5 +8,5 @@ import {isTimestamped} from "timestamped";
  * @param value A value of `unknown` type.
  */
 export const isOrder = (value: unknown): value is Order => {
-  return isTimestamped(value) && isComponent(value);
+  return isTimestamped(value) && isComponent(value) && isNamed(value);
 };
