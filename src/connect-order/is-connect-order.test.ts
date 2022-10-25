@@ -1,4 +1,7 @@
 import { ANTAGONIST } from "antagonist";
+import { CONNECT } from "connect";
+import { createTimestamp } from "create-timestamp";
+import { DISCONNECT } from "disconnect";
 import { PROTAGONIST } from "protagonist";
 import { createUuid } from "uuid";
 import { ConnectOrder } from "./connect-order";
@@ -8,16 +11,16 @@ const validExamples: ConnectOrder[] = [
   {
     id: createUuid(),
     entityId: createUuid(),
-    name: "connect",
+    name: CONNECT,
     role: ANTAGONIST,
-    timestamp: Date.now(),
+    timestamp: createTimestamp(),
   },
   {
     id: createUuid(),
     entityId: createUuid(),
-    name: "connect",
+    name: CONNECT,
     role: PROTAGONIST,
-    timestamp: Date.now(),
+    timestamp: createTimestamp(),
   },
 ];
 
@@ -25,9 +28,9 @@ const invalidExamples = [
   {
     id: createUuid(),
     entityId: createUuid(),
-    name: "disconnect",
+    name: DISCONNECT,
     role: ANTAGONIST,
-    timestamp: Date.now(),
+    timestamp: createTimestamp(),
   },
 ];
 
