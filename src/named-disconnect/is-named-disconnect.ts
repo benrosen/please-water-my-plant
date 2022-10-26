@@ -1,5 +1,5 @@
-import {DISCONNECT} from "../disconnect";
-import {isNamed} from "../named";
+import {DISCONNECT} from "disconnect";
+import {isNamed} from "named";
 import {NamedDisconnect} from "./named-disconnect";
 
 /**

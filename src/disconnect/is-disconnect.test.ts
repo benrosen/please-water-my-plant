@@ -1,4 +1,4 @@
-import { CONNECT } from "../connect";
+import { CONNECT } from "connect";
 import { DISCONNECT } from "./disconnect";
 import { isDisconnect } from "./is-disconnect";
 

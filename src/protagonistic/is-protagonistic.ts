@@ -1,5 +1,5 @@
-import {isProtagonist} from "../protagonist";
-import {isRoleRelated} from "../role-related";
+import {isProtagonist} from "protagonist";
+import {isRoleRelated} from "role-related";
 import {Protagonistic} from "./protagonistic";
 
 /**

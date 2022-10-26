@@ -1,7 +1,7 @@
-import { CONNECT } from "../connect";
-import { createTimestamp } from "../create-timestamp";
-import { DISCONNECT } from "../disconnect";
-import { createUuid } from "../uuid";
+import { CONNECT } from "connect";
+import { createTimestamp } from "create-timestamp";
+import { DISCONNECT } from "disconnect";
+import { createUuid } from "uuid";
 import { DisconnectOrder } from "./disconnect-order";
 import { isDisconnectOrder } from "./is-disconnect-order";
 

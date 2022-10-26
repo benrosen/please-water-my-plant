@@ -1,5 +1,5 @@
-import {isAntagonist} from "../antagonist";
-import {isRoleRelated} from "../role-related";
+import {isAntagonist} from "antagonist";
+import {isRoleRelated} from "role-related";
 import {Antagonistic} from "./antagonistic";
 
 /**
