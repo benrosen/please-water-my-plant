@@ -1,4 +1,4 @@
-import {isRole} from "../role";
+import {isRole} from "role";
 import {RoleRelated} from "./role-related";
 
 /**

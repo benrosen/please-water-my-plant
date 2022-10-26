@@ -1,5 +1,5 @@
-import { ANTAGONIST } from "../antagonist";
-import { PROTAGONIST } from "../protagonist";
+import { ANTAGONIST } from "antagonist";
+import { PROTAGONIST } from "protagonist";
 import { isRoleRelated } from "./is-role-related";
 
 const validExamples = [

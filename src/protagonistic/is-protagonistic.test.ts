@@ -1,5 +1,5 @@
-import { ANTAGONIST } from "../antagonist";
-import { PROTAGONIST } from "../protagonist";
+import { ANTAGONIST } from "antagonist";
+import { PROTAGONIST } from "protagonist";
 import { isProtagonistic } from "./is-protagonistic";
 import { Protagonistic } from "./protagonistic";
 
