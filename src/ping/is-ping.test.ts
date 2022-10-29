@@ -1,4 +1,4 @@
-import { CONNECT } from "../connect";
+import { CONNECT } from "connect";
 import { isPing } from "./is-ping";
 import { PING } from "./ping";
 
