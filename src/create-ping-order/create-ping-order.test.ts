@@ -1,4 +1,4 @@
-import { PING } from "../ping";
+import { PING } from "ping";
 import { createPingOrder } from "./create-ping-order";
 
 describe("The createPingOrder function", () => {
