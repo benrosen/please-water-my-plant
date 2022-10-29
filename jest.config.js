@@ -5,4 +5,5 @@ module.exports = {
   forceExit: true,
   moduleDirectories: ["node_modules", "src"],
   collectCoverage: true,
+  setupFiles: ["jest-canvas-mock"],
 };
