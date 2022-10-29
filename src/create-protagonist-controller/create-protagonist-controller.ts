@@ -1,30 +1,22 @@
 import { IdentifiedByUuid } from "identified-by-uuid";
 import { Order } from "order";
-import { Scene } from "phaser";
-import { createUuid } from "uuid";
-
-35;
+import { postPingOrderOnPointerDown } from "post-ping-order-on-pointer-down";
+import InputPlugin = Phaser.Input.InputPlugin;
 
 /**
  * Invoke a callback function each time the protagonist creates a new {@link Order}
  * @param params The config options
- * @param params.handleOnOrderCreated A callback function to invoke each time an {@link Order} is created
  * @param params.id A {@link Uuid} that identifies this protagonist controller
- * @param params.scene A {@link Scene} instance
+ * @param params.input The {@link EventEmitter} that emits pointer down input events
  */
 export const createProtagonistController = ({
-  handleOnOrderCreated,
   id,
-  scene,
+  input,
 }: IdentifiedByUuid & {
-  handleOnOrderCreated: (order: Order) => void;
-  scene: Scene;
+  input: InputPlugin;
 }) => {
-  scene.input.on(Phaser.Input.Events.POINTER_DOWN, () => {
-    handleOnOrderCreated({
-      id: createUuid(),
-      entityId: id,
-      timestamp: Date.now(),
-    });
+  postPingOrderOnPointerDown({
+    id,
+    input,
   });
 };
