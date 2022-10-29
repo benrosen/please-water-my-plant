@@ -1,5 +1,5 @@
-import { CONNECT } from "../connect";
-import { PING } from "../ping";
+import { CONNECT } from "connect";
+import { PING } from "ping";
 import { isNamedPing } from "./is-named-ping";
 import { NamedPing } from "./named-ping";
 
