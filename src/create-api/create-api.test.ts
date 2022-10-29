@@ -26,6 +26,7 @@ describe("The createApi function", () => {
                     id: "5F6461B8-B322-4AA4-8AA4-05BCA0E501B2",
                     entityId: "C606CEAD-287D-4FA1-81F5-531A36BF93C5",
                     timestamp: 0,
+                    name: "",
                   },
                 ] as Order[])(
                   "when given a valid request: %j",
@@ -111,6 +112,7 @@ describe("The createApi function", () => {
                     id: "5F6461B8-B322-4AA4-8AA4-05BCA0E501B2",
                     entityId: "C606CEAD-287D-4FA1-81F5-531A36BF93C5",
                     timestamp: 0,
+                    name: "",
                   };
 
                   const postOrderResponse = await postOrderRequest.send(order);
