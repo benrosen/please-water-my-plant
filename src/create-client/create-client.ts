@@ -1,7 +1,8 @@
 import {Component} from "component";
-import {ComponentsResourcePath} from "components-resource-path";
+import {createComponentsChangedEventSource} from "create-components-changed-event-source";
+import {IdentifiedByUuid} from "identified-by-uuid";
 import {Order} from "order";
-import {OrderResourcePath} from "order-resource-path";
+import {RoleRelated} from "role-related";
 
 /**
  * Invoke a callback function when {@link Component} messages are received from the server.
@@ -11,24 +12,20 @@ import {OrderResourcePath} from "order-resource-path";
  */
 export const createClient = ({
   handleOnComponentsChanged,
-}: {
-  handleOnComponentsChanged: (components: Component[]) => void;
-}): ((order: Order) => void) => {
-  const onComponentsChanged = new EventSource(ComponentsResourcePath);
+  id,
+  role,
+}: IdentifiedByUuid &
+  RoleRelated & {
+    handleOnComponentsChanged: (components: Component[]) => void;
+  }) => {
+  const componentsChangedEventSource = createComponentsChangedEventSource({
+    id,
+    role,
+  });
 
-  onComponentsChanged.onmessage = (event) => {
+  componentsChangedEventSource.onmessage = (event) => {
     const components = JSON.parse(event.data);
 
     handleOnComponentsChanged(components);
-  };
-
-  return async (order: Order) => {
-    await fetch(OrderResourcePath, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(order),
-    });
   };
 };
