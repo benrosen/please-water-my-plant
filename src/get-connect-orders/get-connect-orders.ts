@@ -10,7 +10,7 @@ import {getComponentsByCustomIndex} from "get-components-by-custom-index";
 export const getConnectOrders = ({
   componentIndex,
 }: {
-  componentIndex: ComponentIndex;
+  componentIndex: ComponentIndex<ConnectOrder>;
 }) => {
   return getComponentsByCustomIndex<ConnectOrder>({
     componentIndex,
