@@ -1,5 +1,6 @@
 /** @jest-environment jsdom */
 
+import { ANTAGONIST } from "antagonist";
 import { Game } from "phaser";
 import { createUuid } from "uuid";
 import { createConsole } from "./create-console";
@@ -19,6 +20,7 @@ describe("The createConsole function", () => {
     createConsole({
       createController: jest.fn(),
       id,
+      role: ANTAGONIST,
     });
 
     expect(mockedGame).toHaveBeenCalled();
