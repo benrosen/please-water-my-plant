@@ -18,16 +18,16 @@ export const createAntagonisticComponent = ({
   entityId,
 }: EntityRelated & {
   componentIndex: ComponentIndex;
-}): ComponentIndex => {
+}): ComponentIndex<Partial<Antagonistic> & Component> => {
   const components = Object.values(componentIndex.byComponentId);
 
-  const antagonisticComponent: Antagonistic & Component = {
+  const antagonisticComponent: Partial<Antagonistic> & Component = {
     entityId,
     id: createUuid(),
     role: ANTAGONIST,
   };
 
-  return createComponentIndex({
+  return createComponentIndex<Partial<Antagonistic> & Component>({
     components: [...components, antagonisticComponent],
     indexers: getIndexers(),
   });
