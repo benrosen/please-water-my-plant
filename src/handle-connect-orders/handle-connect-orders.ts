@@ -1,6 +1,7 @@
 import {ComponentIndex} from "component-index";
 import {getConnectOrders} from "get-connect-orders";
 import {handleConnectOrder} from "handle-connect-order";
+import {ConnectOrder} from "../connect-order";
 
 /**
  * Handle every {@link ConnectOrder} in the given {@link ComponentIndex}
@@ -10,7 +11,7 @@ import {handleConnectOrder} from "handle-connect-order";
 export const handleConnectOrders = ({
   componentIndex,
 }: {
-  componentIndex: ComponentIndex;
+  componentIndex: ComponentIndex<ConnectOrder>;
 }) => {
   const connectOrders = getConnectOrders({ componentIndex });
 

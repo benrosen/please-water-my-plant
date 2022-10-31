@@ -1,6 +1,7 @@
 import {ComponentIndex} from "component-index";
 import {getDisconnectOrders} from "get-disconnect-orders";
 import {handleDisconnectOrder} from "handle-disconnect-order";
+import {DisconnectOrder} from "../disconnect-order";
 
 /**
  * Handle every {@link DisconnectOrder} in the given {@link ComponentIndex}
@@ -10,7 +11,7 @@ import {handleDisconnectOrder} from "handle-disconnect-order";
 export const handleDisconnectOrders = ({
   componentIndex,
 }: {
-  componentIndex: ComponentIndex;
+  componentIndex: ComponentIndex<DisconnectOrder>;
 }) => {
   const disconnectOrders = getDisconnectOrders({ componentIndex });
 
