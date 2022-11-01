@@ -4,18 +4,23 @@ import {CloseEventName} from "close-event-name";
 import {Component} from "component";
 import {ComponentsResourcePath} from "components-resource-path";
 import cors from "cors";
+import {createConnectOrder} from "create-connect-order";
+import {createDisconnectOrder} from "create-disconnect-order";
 import express from "express";
 import {HomePagePath} from "home-page-path";
 import {OK_STATUS_CODE} from "ok-status-code";
 import {Order} from "order";
 import {OrderResourcePath} from "order-resource-path";
 import {parseOrderFromRequest} from "parse-order-from-request";
+// TODO does this need to be converted to default import?
 import * as path from "path";
 import {ProtagonistPagePath} from "protagonist-page-path";
 import {respondWithAccepted} from "respond-with-accepted";
 import {respondWithBadRequestError} from "respond-with-bad-request-error";
 import {respondWithInternalServerError} from "respond-with-internal-server-error";
+import {isRole} from "role";
 import {ServerSentEventHeaders} from "server-sent-event-headers";
+import {isUuid} from "uuid";
 
 /**
  * Create an API for posting {@link Order} objects, getting {@link Component} updates, and serving HTML pages.
@@ -24,19 +29,19 @@ import {ServerSentEventHeaders} from "server-sent-event-headers";
  * @param params.registerOnComponentsChangedHandler A higher-order function that registers a callback that can send {@link Component} updates via server-sent events.
  */
 export const createApi = ({
-  onOrderPosted,
-  registerOnComponentsChangedHandler,
-}: {
+                            onOrderPosted,
+                            registerOnComponentsChangedHandler,
+                          }: {
   onOrderPosted: (order: Order) => void;
   registerOnComponentsChangedHandler: (
-    handleOnComponentsChanged: (components: Component[]) => void
+      handleOnComponentsChanged: (components: Component[]) => void
   ) => () => void;
 }) => {
   const server = express();
 
   server.use(bodyParser.json());
 
-  server.use(bodyParser.urlencoded({ extended: false }));
+  server.use(bodyParser.urlencoded({extended: false}));
 
   server.use(cors());
 
@@ -47,31 +52,58 @@ export const createApi = ({
   server.use(ProtagonistPagePath, express.static("src/protagonist-page"));
 
   server.get(ComponentsResourcePath, (request, response) => {
+    const {entityId, role} = request.query;
+
+    if (!(isUuid(entityId) && isRole(role))) {
+      return respondWithBadRequestError({response});
+    }
+
     response.writeHead(OK_STATUS_CODE, ServerSentEventHeaders);
 
     response.flushHeaders();
 
-    const deregisterOnComponentsChangedHandler =
-      registerOnComponentsChangedHandler((components: Component[]) => {
-        response.write(`data: ${JSON.stringify(components)}\n\n`);
+    try {
+      const connectOrder = createConnectOrder({
+        entityId,
+        role,
       });
 
-    response.on(CloseEventName, deregisterOnComponentsChangedHandler);
+      onOrderPosted(connectOrder);
+
+      const deregisterOnComponentsChangedHandler =
+          registerOnComponentsChangedHandler((components: Component[]) => {
+            response.write(`data: ${JSON.stringify(components)}\n\n`);
+          });
+
+      response.on(CloseEventName, () => {
+        deregisterOnComponentsChangedHandler();
+
+        const disconnectOrder = createDisconnectOrder({
+          entityId,
+        });
+
+        onOrderPosted(disconnectOrder);
+      });
+    } catch (error) {
+      return respondWithInternalServerError({response});
+    }
   });
 
   server.post(OrderResourcePath, (request, response) => {
     try {
-      const order = parseOrderFromRequest({ request });
+      const order = parseOrderFromRequest({
+        body: request.body
+      });
 
       if (order === undefined) {
-        return respondWithBadRequestError({ response });
+        return respondWithBadRequestError({response});
       }
 
       onOrderPosted(order);
 
-      return respondWithAccepted({ response });
+      return respondWithAccepted({response});
     } catch {
-      return respondWithInternalServerError({ response });
+      return respondWithInternalServerError({response});
     }
   });
 
@@ -79,13 +111,13 @@ export const createApi = ({
     response.status(404);
 
     if (request.accepts("html")) {
-      response.sendFile(path.join(__dirname, "../not-found-page/index.html"));
+      response.sendFile(path.join(__dirname, "not-found-page/index.html"));
 
       return;
     }
 
     if (request.accepts("json")) {
-      response.json({ error: "Not found" });
+      response.json({error: "Not found"});
 
       return;
     }
