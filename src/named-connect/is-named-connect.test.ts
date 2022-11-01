@@ -1,8 +1,11 @@
+import { CONNECT } from "../connect";
+import { DISCONNECT } from "../disconnect";
 import { isNamedConnect } from "./is-named-connect";
+import { NamedConnect } from "./named-connect";
 
-const validExamples = [];
+const validExamples: NamedConnect[] = [{ name: CONNECT }];
 
-const invalidExamples = [];
+const invalidExamples = [{ name: DISCONNECT }];
 
 describe("The isNamedConnect type-guard function", () => {
   describe("should return true", () => {
