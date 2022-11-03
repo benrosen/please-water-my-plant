@@ -1,13 +1,15 @@
 import { ACCEPTED_STATUS_CODE } from "accepted-status-code";
+import { ANTAGONIST } from "antagonist";
 import { BadRequestErrorStatusCode } from "bad-request-error-status-code";
 import { Component } from "component";
-import { ComponentsResourcePath } from "components-resource-path";
 import { createApi } from "create-api";
+import { createComponentsChangedEventSourceUrl } from "create-components-changed-event-source-url";
 import EventSource from "eventsource";
 import { INTERNAL_SERVER_ERROR_STATUS_CODE } from "internal-server-error-status-code";
 import { Order } from "order";
 import { OrderResourcePath } from "order-resource-path";
 import createApiTestHarness from "supertest";
+import { createUuid } from "uuid";
 
 const mockOnOrderPosted = jest.fn();
 
@@ -145,8 +147,14 @@ describe("The createApi function", () => {
 
                   const apiTestHarness = createApiTestHarness(api);
 
+                  const mockComponentsEndpointUrl =
+                    createComponentsChangedEventSourceUrl({
+                      clientId: createUuid(),
+                      role: ANTAGONIST,
+                    });
+
                   const componentsEndpointTestHarness = apiTestHarness.get(
-                    ComponentsResourcePath
+                    mockComponentsEndpointUrl
                   );
 
                   const eventSource = new EventSource(
@@ -171,6 +179,12 @@ describe("The createApi function", () => {
 
                     done();
                   };
+
+                  eventSource.onerror = (event) => {
+                    eventSource.close();
+
+                    done(event);
+                  };
                 });
               });
             });
@@ -188,8 +202,14 @@ describe("The createApi function", () => {
 
                 const apiTestHarness = createApiTestHarness(api);
 
+                const mockComponentsEndpointUrl =
+                  createComponentsChangedEventSourceUrl({
+                    clientId: createUuid(),
+                    role: ANTAGONIST,
+                  });
+
                 const componentsEndpointTestHarness = apiTestHarness.get(
-                  ComponentsResourcePath
+                  mockComponentsEndpointUrl
                 );
 
                 const eventSource = new EventSource(
