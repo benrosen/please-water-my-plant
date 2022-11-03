@@ -1,7 +1,7 @@
 import {ComponentIndex} from "component-index";
+import {ConnectOrder} from "connect-order";
 import {getConnectOrders} from "get-connect-orders";
 import {handleConnectOrder} from "handle-connect-order";
-import {ConnectOrder} from "../connect-order";
 
 /**
  * Handle every {@link ConnectOrder} in the given {@link ComponentIndex}
