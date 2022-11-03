@@ -1,5 +1,6 @@
 import {ComponentIndex} from "component-index";
 import {DisconnectOrder} from "disconnect-order";
+import {removeComponent} from "remove-component";
 import {removeComponentsByEntityId} from "remove-components-by-entity-id";
 
 /**
@@ -15,6 +16,11 @@ export const handleDisconnectOrder = ({
   componentIndex: ComponentIndex;
   order: DisconnectOrder;
 }) => {
+  componentIndex = removeComponent({
+    componentId: order.id,
+    componentIndex,
+  });
+
   return removeComponentsByEntityId({
     componentIndex,
     entityId: order.entityId,
