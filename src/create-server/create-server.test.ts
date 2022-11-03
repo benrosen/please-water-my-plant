@@ -1,8 +1,10 @@
+import { ANTAGONIST } from "antagonist";
 import { Component } from "component";
-import { ComponentsResourcePath } from "components-resource-path";
+import { createComponentsChangedEventSourceUrl } from "create-components-changed-event-source-url";
 import { createServer } from "create-server";
 import EventSource from "eventsource";
 import createApiTestHarness from "supertest";
+import { createUuid } from "uuid";
 
 describe("The createServer function", () => {
   describe("should return a server", () => {
@@ -82,8 +84,14 @@ describe("The createServer function", () => {
 
                 const apiTestHarness = createApiTestHarness(server);
 
+                const mockComponentsEndpointUrl =
+                  createComponentsChangedEventSourceUrl({
+                    clientId: createUuid(),
+                    role: ANTAGONIST,
+                  });
+
                 const componentsEndpointTestHarness = apiTestHarness.get(
-                  ComponentsResourcePath
+                  mockComponentsEndpointUrl
                 );
 
                 const eventSource = new EventSource(
