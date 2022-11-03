@@ -1,8 +1,9 @@
+import { DISCONNECT } from "disconnect";
 import { isNamed } from "./is-named";
 
-const validExamples = [];
+const validExamples = [{ name: DISCONNECT }];
 
-const invalidExamples = [];
+const invalidExamples = [{ foo: "bar" }];
 
 describe("The isNamed type-guard function", () => {
   describe("should return true", () => {
