@@ -4,6 +4,7 @@ import {ConnectOrder} from "connect-order";
 import {createAntagonisticComponent} from "create-antagonistic-component";
 import {createProtagonisticComponent} from "create-protagonistic-component";
 import {isProtagonist} from "protagonist";
+import {removeComponent} from "remove-component";
 
 /**
  * Handle a {@link ConnectOrder}
@@ -18,6 +19,11 @@ export const handleConnectOrder = ({
   componentIndex: ComponentIndex;
   order: ConnectOrder;
 }) => {
+  componentIndex = removeComponent({
+    componentId: order.id,
+    componentIndex,
+  });
+
   if (isAntagonist(order.role)) {
     return createAntagonisticComponent({
       componentIndex,
