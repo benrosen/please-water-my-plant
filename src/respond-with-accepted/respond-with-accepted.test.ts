@@ -12,9 +12,9 @@ const mockResponse = {
   status: mockStatus,
 } as unknown as Response;
 
-jest.mock("../respond-with-status-code", () => {
+jest.mock("respond-with-status-code", () => {
   return {
-    ...jest.requireActual("../respond-with-status-code"),
+    ...jest.requireActual("respond-with-status-code"),
     respondWithStatusCode: jest.fn(),
   };
 });
