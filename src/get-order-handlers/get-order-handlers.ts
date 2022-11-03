@@ -1,6 +1,6 @@
+import {ComponentIndex} from "component-index";
 import {handleConnectOrders} from "handle-connect-orders";
 import {handleDisconnectOrders} from "handle-disconnect-orders";
-import {ComponentIndex} from "../component-index";
 
 /**
  * Return an array of functions that can handle {@link Order} instances

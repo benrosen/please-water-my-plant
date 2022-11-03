@@ -1,7 +1,7 @@
 import {ComponentIndex} from "component-index";
+import {DisconnectOrder} from "disconnect-order";
 import {getDisconnectOrders} from "get-disconnect-orders";
 import {handleDisconnectOrder} from "handle-disconnect-order";
-import {DisconnectOrder} from "../disconnect-order";
 
 /**
  * Handle every {@link DisconnectOrder} in the given {@link ComponentIndex}

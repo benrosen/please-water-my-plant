@@ -1,4 +1,4 @@
-import { DISCONNECT } from "../disconnect";
+import { DISCONNECT } from "disconnect";
 import { getDisconnectOrders } from "./get-disconnect-orders";
 
 describe("The getDisconnectOrders function", () => {

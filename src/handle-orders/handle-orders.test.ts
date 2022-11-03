@@ -1,5 +1,5 @@
-import { ComponentIndex } from "../component-index";
-import { getOrderHandlers } from "../get-order-handlers";
+import { ComponentIndex } from "component-index";
+import { getOrderHandlers } from "get-order-handlers";
 import { handleOrders } from "./handle-orders";
 
 jest.mock("get-order-handlers");

@@ -1,5 +1,5 @@
-import { CONNECT } from "../connect";
-import { DISCONNECT } from "../disconnect";
+import { CONNECT } from "connect";
+import { DISCONNECT } from "disconnect";
 import { isNamedConnect } from "./is-named-connect";
 import { NamedConnect } from "./named-connect";
 
