@@ -13,7 +13,6 @@ import {Order} from "order";
 import {OrderResourcePath} from "order-resource-path";
 import {parseOrderFromRequest} from "parse-order-from-request";
 // TODO does this need to be converted to default import?
-import * as path from "path";
 import {ProtagonistPagePath} from "protagonist-page-path";
 import {respondWithAccepted} from "respond-with-accepted";
 import {respondWithBadRequestError} from "respond-with-bad-request-error";
@@ -29,19 +28,19 @@ import {isUuid} from "uuid";
  * @param params.registerOnComponentsChangedHandler A higher-order function that registers a callback that can send {@link Component} updates via server-sent events.
  */
 export const createApi = ({
-                            onOrderPosted,
-                            registerOnComponentsChangedHandler,
-                          }: {
+  onOrderPosted,
+  registerOnComponentsChangedHandler,
+}: {
   onOrderPosted: (order: Order) => void;
   registerOnComponentsChangedHandler: (
-      handleOnComponentsChanged: (components: Component[]) => void
+    handleOnComponentsChanged: (components: Component[]) => void
   ) => () => void;
 }) => {
   const server = express();
 
   server.use(bodyParser.json());
 
-  server.use(bodyParser.urlencoded({extended: false}));
+  server.use(bodyParser.urlencoded({ extended: false }));
 
   server.use(cors());
 
@@ -52,10 +51,10 @@ export const createApi = ({
   server.use(ProtagonistPagePath, express.static("src/protagonist-page"));
 
   server.get(ComponentsResourcePath, (request, response) => {
-    const {entityId, role} = request.query;
+    const { clientId, role } = request.query;
 
-    if (!(isUuid(entityId) && isRole(role))) {
-      return respondWithBadRequestError({response});
+    if (!(isUuid(clientId) && isRole(role))) {
+      return respondWithBadRequestError({ response });
     }
 
     response.writeHead(OK_STATUS_CODE, ServerSentEventHeaders);
@@ -64,65 +63,47 @@ export const createApi = ({
 
     try {
       const connectOrder = createConnectOrder({
-        entityId,
+        entityId: clientId,
         role,
       });
 
       onOrderPosted(connectOrder);
 
       const deregisterOnComponentsChangedHandler =
-          registerOnComponentsChangedHandler((components: Component[]) => {
-            response.write(`data: ${JSON.stringify(components)}\n\n`);
-          });
+        registerOnComponentsChangedHandler((components: Component[]) => {
+          response.write(`data: ${JSON.stringify(components)}\n\n`);
+        });
 
       response.on(CloseEventName, () => {
         deregisterOnComponentsChangedHandler();
 
         const disconnectOrder = createDisconnectOrder({
-          entityId,
+          entityId: clientId,
         });
 
         onOrderPosted(disconnectOrder);
       });
     } catch (error) {
-      return respondWithInternalServerError({response});
+      return respondWithInternalServerError({ response });
     }
   });
 
   server.post(OrderResourcePath, (request, response) => {
     try {
       const order = parseOrderFromRequest({
-        body: request.body
+        body: request.body,
       });
 
       if (order === undefined) {
-        return respondWithBadRequestError({response});
+        return respondWithBadRequestError({ response });
       }
 
       onOrderPosted(order);
 
-      return respondWithAccepted({response});
+      return respondWithAccepted({ response });
     } catch {
-      return respondWithInternalServerError({response});
+      return respondWithInternalServerError({ response });
     }
-  });
-
-  server.use((request, response) => {
-    response.status(404);
-
-    if (request.accepts("html")) {
-      response.sendFile(path.join(__dirname, "not-found-page/index.html"));
-
-      return;
-    }
-
-    if (request.accepts("json")) {
-      response.json({error: "Not found"});
-
-      return;
-    }
-
-    response.type("txt").send("Not found");
   });
 
   return server;
