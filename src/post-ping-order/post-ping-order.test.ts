@@ -2,9 +2,9 @@ import { postOrder } from "post-order";
 import { createUuid } from "uuid";
 import { postPingOrder } from "./post-ping-order";
 
-jest.mock("../post-order", () => {
+jest.mock("post-order", () => {
   return {
-    ...jest.requireActual("../post-order"),
+    ...jest.requireActual("post-order"),
     postOrder: jest.fn(),
   };
 });

@@ -1,13 +1,13 @@
 /** @jest-environment jsdom */
 
+import { ANTAGONIST } from "antagonist";
+import { createComponentsChangedEventSourceUrl } from "create-components-changed-event-source-url";
 import EventSource from "eventsource";
-import { ANTAGONIST } from "../antagonist";
-import { createComponentsChangedEventSourceUrl } from "../create-components-changed-event-source-url";
-import { createUuid } from "../uuid";
+import { createUuid } from "uuid";
 import { createComponentsChangedEventSource } from "./create-components-changed-event-source";
 import resetAllMocks = jest.resetAllMocks;
 
-jest.mock("../create-components-changed-event-source-url");
+jest.mock("create-components-changed-event-source-url");
 
 const mockCreateComponentsChangeEventSourceUrl = jest.mocked(
   createComponentsChangedEventSourceUrl

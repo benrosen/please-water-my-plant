@@ -1,9 +1,9 @@
 import { createUpdateComponentsLoop } from "create-update-components-loop";
 import { updateComponents } from "update-components";
 
-jest.mock("../update-components", () => {
+jest.mock("update-components", () => {
   return {
-    ...jest.requireActual("../update-components"),
+    ...jest.requireActual("update-components"),
     updateComponents: jest.fn(),
   };
 });
