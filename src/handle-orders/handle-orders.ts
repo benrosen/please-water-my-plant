@@ -10,7 +10,7 @@ export const handleOrders = ({
   componentIndex,
 }: {
   componentIndex: ComponentIndex;
-}) => {
+}): ComponentIndex => {
   const orderHandlers = getOrderHandlers();
 
   return orderHandlers.reduce<ComponentIndex>(
