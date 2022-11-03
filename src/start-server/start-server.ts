@@ -23,6 +23,7 @@ export const startServer = (): (() => Promise<void>) => {
   return async () => {
     return new Promise((resolve, reject) => {
       application.on(CloseEventName, resolve);
+
       application.on(ErrorEventName, reject);
 
       application.close();
