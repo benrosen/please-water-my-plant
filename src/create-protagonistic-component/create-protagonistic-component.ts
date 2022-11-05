@@ -21,7 +21,7 @@ export const createProtagonisticComponent = ({
 }): ComponentIndex<Partial<Protagonistic> & Component> => {
   const components = Object.values(componentIndex.byComponentId);
 
-  const protagonisticComponent: Partial<Protagonistic> & Component = {
+  const protagonisticComponent: Protagonistic & Component = {
     entityId,
     id: createUuid(),
     role: PROTAGONIST,
