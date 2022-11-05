@@ -21,7 +21,7 @@ export const createAntagonisticComponent = ({
 }): ComponentIndex<Partial<Antagonistic> & Component> => {
   const components = Object.values(componentIndex.byComponentId);
 
-  const antagonisticComponent: Partial<Antagonistic> & Component = {
+  const antagonisticComponent: Antagonistic & Component = {
     entityId,
     id: createUuid(),
     role: ANTAGONIST,
