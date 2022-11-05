@@ -1,4 +1,4 @@
-import { createTimestamp } from "../create-timestamp";
+import { createTimestamp } from "create-timestamp";
 import { isExpired } from "./is-expired";
 
 const validExamples = [
