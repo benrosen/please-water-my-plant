@@ -1,11 +1,11 @@
 import {ComponentIndexer} from "component-indexer";
 import {isConnectOrder} from "connect-order";
 import {isDisconnectOrder} from "disconnect-order";
-import {isOrder} from "order";
+import {isExpired} from "expired";
 
 /**
  * Return an array of {@link ComponentIndexer} functions.
  */
 export const getIndexers = (): ComponentIndexer[] => {
-  return [isConnectOrder, isDisconnectOrder, isOrder];
+  return [isConnectOrder, isDisconnectOrder, isExpired];
 };
