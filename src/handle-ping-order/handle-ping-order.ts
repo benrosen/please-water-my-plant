@@ -1,6 +1,7 @@
 import { ComponentIndex } from "component-index";
 import { createPingEntity } from "create-ping-entity";
 import { PingOrder } from "ping-order";
+import { removeComponent } from "../remove-component";
 
 export const handlePingOrder = ({
   componentIndex,
@@ -9,8 +10,13 @@ export const handlePingOrder = ({
   componentIndex: ComponentIndex;
   order: PingOrder;
 }) => {
-  return createPingEntity({
+  const componentIndexWithoutPingOrder = removeComponent({
+    componentId: order.id,
     componentIndex,
+  });
+
+  return createPingEntity({
+    componentIndex: componentIndexWithoutPingOrder,
     creatorEntityId: order.entityId,
     position: order.position,
   });
