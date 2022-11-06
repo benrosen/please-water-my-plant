@@ -64,7 +64,7 @@ describe("The handleConnectOrder function", () => {
   });
 
   describe("should throw", () => {
-    test("when the client connects as an ANTAGONIST", () => {
+    test("when the client connects as an unsupported role", () => {
       expect(() => {
         handleConnectOrder({
           componentIndex: {
