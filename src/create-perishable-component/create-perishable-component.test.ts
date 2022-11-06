@@ -1,6 +1,6 @@
+import { createTimestamp } from "create-timestamp";
 import { getIndexers } from "get-indexers";
 import { createUuid } from "uuid";
-import { createTimestamp } from "../create-timestamp";
 import { createPerishableComponent } from "./create-perishable-component";
 
 jest.mock("get-indexers");

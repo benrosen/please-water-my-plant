@@ -1,8 +1,6 @@
-import {getExpiredComponents} from "../get-expired-components";
-import {removeComponent} from "../remove-component";
-import {removeExpiredComponents} from "./remove-expired-components"; // should call removecomponent once for each expired component
-
-// should call removecomponent once for each expired component
+import { getExpiredComponents } from "get-expired-components";
+import { removeComponent } from "remove-component";
+import { removeExpiredComponents } from "./remove-expired-components";
 
 jest.mock("remove-component");
 
