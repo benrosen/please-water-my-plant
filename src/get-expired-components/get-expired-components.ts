@@ -11,7 +11,7 @@ import {getComponentsByCustomIndex} from "get-components-by-custom-index";
 export const getExpiredComponents = ({
   componentIndex,
 }: {
-  componentIndex: ComponentIndex<Expired & Component>;
+  componentIndex: ComponentIndex<Partial<Expired> & Component>;
 }) => {
   return getComponentsByCustomIndex<Expired & Component>({
     componentIndex,
