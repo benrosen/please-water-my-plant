@@ -1,8 +1,8 @@
 import {isAntagonist} from "antagonist";
 import {ComponentIndex} from "component-index";
 import {ConnectOrder} from "connect-order";
-import {createAntagonisticComponent} from "create-antagonistic-component";
-import {createProtagonisticComponent} from "create-protagonistic-component";
+import {createAntagonistEntity} from "create-antagonist-entity";
+import {createProtagonistEntity} from "create-protagonist-entity";
 import {isProtagonist} from "protagonist";
 import {removeComponent} from "remove-component";
 
@@ -25,14 +25,14 @@ export const handleConnectOrder = ({
   });
 
   if (isAntagonist(order.role)) {
-    return createAntagonisticComponent({
+    return createAntagonistEntity({
       componentIndex,
       entityId: order.entityId,
     });
   }
 
   if (isProtagonist(order.role)) {
-    return createProtagonisticComponent({
+    return createProtagonistEntity({
       componentIndex,
       entityId: order.entityId,
     });
