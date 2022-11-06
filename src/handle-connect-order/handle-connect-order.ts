@@ -19,21 +19,21 @@ export const handleConnectOrder = ({
   componentIndex: ComponentIndex;
   order: ConnectOrder;
 }) => {
-  componentIndex = removeComponent({
+  const componentIndexWithoutConnectOrder = removeComponent({
     componentId: order.id,
     componentIndex,
   });
 
   if (isAntagonist(order.role)) {
     return createAntagonistEntity({
-      componentIndex,
+      componentIndex: componentIndexWithoutConnectOrder,
       entityId: order.entityId,
     });
   }
 
   if (isProtagonist(order.role)) {
     return createProtagonistEntity({
-      componentIndex,
+      componentIndex: componentIndexWithoutConnectOrder,
       entityId: order.entityId,
     });
   }
