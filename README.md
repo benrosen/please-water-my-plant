@@ -14,5 +14,5 @@
 
 ## Links
 
-- [Play the game]()
+- [Play the game](https://please-water-my-plant.fly.dev/)
 - [Read the technical documentation](https://benrosen.github.io/please-water-my-plant/)
