@@ -1,17 +1,18 @@
-# Monster Mashup
+# Water My Plant
 
-## What is this?
-
-This directory contains the source code (and some other stuff) for a game called _Monster Mashup_.
-
-## What is _Monster Mashup_?
-
-_Monster Mashup_ is a two player browser game.
-
-- __Player One__ kills monsters.
-- __Player Two__ makes monsters.
+> Hey stranger,
+>
+> Thanks again for agreeing to [water my plant](https://monster-mashup.fly.dev/) for me while I'm away.
+> Her name is Pam.
+> She's a Beefsteak Begonia that I got from my mom.
+> Give her a drink whenever she starts looking thirsty.
+> Please don't over-water her!
+> Hopefully I'll be back soon.
+> Thank you,
+>
+> -ben.
 
 ## Links
 
-- [Play the game](https://monster-mashup.fly.dev/)
+- [Play the game]()
 - [Read the technical documentation](https://benrosen.github.io/monster-mashup/)
